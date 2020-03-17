@@ -1,0 +1,30 @@
+<!-- section content begin -->
+<div class="uk-section uk-margin-large-top">
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-large">            
+            <div class="uk-width-1-1 uk-width-expand@m">                
+                <div class="in-showcase-wrapper product uk-margin-right uk-background-center-left uk-background-contain" style="background-color: {{content.hero.bg-color}}; background-image: url({{root}}{{content.hero.bg-image}});">                    
+                    <img src="{{root}}img/in-lazy-hero.png" data-src="{{root}}{{content.hero.template-image}}" alt="{{content.hero.template-alt}}" width="713" height="457" data-uk-img>                        
+                </div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-3@m">
+                <div class="uk-margin-small-top">
+                    <h1 class="uk-margin-remove-bottom">Monee</h1>
+                    <p class="uk-text-lead uk-margin-remove-top">Forex and Stock HTML template</p>
+                    <hr>
+                    <p class="uk-margin-top">Used technologies</p>
+                    <div class="in-feature-technology uk-float-left uk-margin-medium-bottom">
+                        <div class="uk-flex uk-flex-center">
+                            {{#each content.hero.tech-icon}}
+                            <i class="fab fa-{{this}} fa-lg {{#unless @first}}uk-margin-left{{/unless}}"></i>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <a href="{{content.hero.template-demo}}" class="uk-button uk-button-default uk-border-rounded uk-width-1-1 uk-margin-small-bottom"><i class="fas fa-search uk-margin-small-right"></i>Live preview</a>
+                    <a href="{{content.hero.template-buy-cta}}" class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"><i class="fas fa-shopping-cart uk-margin-small-right"></i>Purchase now</a>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- section content end -->

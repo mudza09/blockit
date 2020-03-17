@@ -1,0 +1,10 @@
+<!-- main navigation begin -->
+<nav class="uk-navbar-container" data-uk-navbar>
+    <div class="in-header-socials">
+        {{#each content.header.socials}}
+        <a href="{{url}}" class="fab fa-{{icon}}"><span>{{anchor}}</span></a>
+        {{/each}}
+    </div>
+    <a class="uk-button uk-button-small uk-button-default uk-border-rounded uk-width-expand uk-visible@m" href="{{root}}{{content.header.discount-url}}">{{content.header.discount-label}}<span class="uk-label uk-margin-small-left">{{content.header.discount-percent}}% Off</span></a>
+</nav>
+<!-- main navigation end -->

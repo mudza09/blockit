@@ -1,0 +1,158 @@
+{
+    "head": {
+        "url": "https://www.indonez.com",
+        "title": "Premium design of html templates for any kind purpose",
+        "description": "Experience in the web industry for more than 10 years, We believe we can provide useful value to you from every HTML templates design that we have created.",
+        "keywords": "site templates, html templates, static website, premium templates, premium html, uikit 3, uikit themes, corporate design, forex design, hosting design, landing page, envato elite author",
+        "author": "Indonez",
+        "og-image": "https://www.indonez.com/img/in-socials-image.jpg",
+        "theme-color": "#1e87f0"
+    },
+    "header": {
+        "logo-img": "img/logo.svg",
+        "logo-url": "https://www.indonez.com",
+        "logo-width": "148",
+        "logo-height": "34",
+        "socials": [
+            {
+                "icon": "instagram",
+                "anchor": "instagram",
+                "url": "https://www.instagram.com/indonez_ig"
+            },
+            {
+                "icon": "facebook-f",
+                "anchor": "facebook",
+                "url": "https://www.facebook.com/indonez"
+            },
+            {
+                "icon": "twitter",
+                "anchor": "twitter",
+                "url": "https://www.twitter.com/indonez_tw"
+            }
+        ],        
+        "discount-label": "Discount",
+        "discount-percent": "30",
+        "discount-url": "product/monee"
+    },
+    "greeting": {
+        "prefix": "We help visualize your business with",
+        "suffix": "ideas",
+        "typing": ["valuable","brilliant","smart","gorgeous","wonderful"],
+        "interval": "4000",
+        "text-lead": "Various HTML template designs for all purposes",
+        "porto-btn": "Browse now",
+        "porto-url": "https://1.envato.market/indonez-portfolio"
+    },
+    "hero": {
+        "bg-color": "#012c6a",
+        "bg-image": "img/in-hero-bg.jpg",
+        "template-name": "Monee",
+        "template-desc": "Forex and Stock HTML template",
+        "template-demo": "https://1.envato.market/Monee-html-demo",
+        "template-image": "img/in-hero-monee.png",
+        "template-alt": "monee-html-template",
+        "template-price": "10",
+        "template-url": "product/monee",
+        "tech-text": "Built with the latest technology",
+        "tech-icon": ["html5","css3-alt","js","uikit","sass"]
+    },
+    "hero-feature": [
+        {
+            "icon": "layer-group",
+            "heading": "Extensible design",
+            "text": "Very easy to customize since HTML code built by section block method"
+        },
+        {
+            "icon": "code",
+            "heading": "Powerful code",
+            "text": "Built based on the latest UIkit 3, HTML5, CSS3 with W3C standards"
+        },
+        {
+            "icon": "tachometer-alt",
+            "heading": "Speed optimized",
+            "text": "Best performance at GTmetrix and PageSpeed Insight (90+)"
+        } 
+    ],
+    "latest": [
+        {
+            "bg-color": "rgba(128, 217, 187, 0.8)",
+            "template-name": "Fina",
+            "template-icon": "chart-area",
+            "template-desc": "Finance design",
+            "template-demo": "https://1.envato.market/Fina-html-demo",
+            "template-image": "img/in-thumb-fina.jpg",
+            "template-alt": "fina-finance-html",
+            "template-price": "14",
+            "template-buy-cta": "https://1.envato.market/Fina-html" 
+        },
+        {
+            "bg-color": "rgba(144, 202, 249, 0.8)",
+            "template-name": "Altis",
+            "template-icon": "server",
+            "template-desc": "Hosting design",
+            "template-demo": "https://1.envato.market/Altis-html-demo",
+            "template-image": "img/in-thumb-altis.jpg",
+            "template-alt": "altis-hosting-html",
+            "template-price": "14",
+            "template-buy-cta": "https://1.envato.market/Altis-html"
+        },
+        {
+            "bg-color": "rgba(255, 204, 128, 0.8)",
+            "template-name": "Boekoe",
+            "template-icon": "book",
+            "template-desc": "Book landing",
+            "template-demo": "https://1.envato.market/Boekoe-html-demo",
+            "template-image": "img/in-thumb-boekoe.jpg",
+            "template-alt": "boekoe-book-html",
+            "template-price": "12",
+            "template-buy-cta": "https://1.envato.market/Boekoe-html"
+        }   
+    ],
+    "classic-text": {
+        "heading": "Looking for classic atmosphere HTML template design?",
+        "prefix": "Classic HTML template design for those of you who want a timeless, elegant and beautiful layout. Even though it has a classic design, it has been equipped with the latest technology and uses ",
+        "suffix": "for easy customization.",
+        "css": "UIkit 3 front-end framework",
+        "icon": "uikit"
+    },
+    "classic-item": [
+        {
+            "template-name": "Vulcan HTML template",
+            "template-logo": "img/in-html-vulcan.svg",
+            "template-sales": "1,197",
+            "template-image": "img/in-hover-vulcan.png",
+            "template-alt": "vulcan-html",
+            "template-url": "https://1.envato.market/Vulcan-html"
+        },
+        {
+            "template-name": "Agivee HTML template",
+            "template-logo": "img/in-html-agivee.svg",
+            "template-sales": "416",
+            "template-image": "img/in-hover-agivee.png",
+            "template-alt": "agivee-html",
+            "template-url": "https://1.envato.market/Agivee-html"
+        },
+        {
+            "template-name": "Minerva HTML template",
+            "template-logo": "img/in-html-minerva.svg",
+            "template-sales": "209",
+            "template-image": "img/in-hover-minerva.png",
+            "template-alt": "minerva-html",
+            "template-url": "https://1.envato.market/Minerva-html"
+        },
+        {
+            "template-name": "Vilisya HTML template",
+            "template-logo": "img/in-html-vilisya.svg",
+            "template-sales": "252",
+            "template-image": "img/in-hover-vilisya.png",
+            "template-alt": "vilisya-html",
+            "template-url": "https://1.envato.market/Vilisya-html"
+        }
+    ],
+    "footer": {
+        "logo-img": "img/logo-alt.svg",
+        "logo-width": "34",
+        "logo-height": "34",
+        "email": "hello@indonez.com"
+    }    
+}

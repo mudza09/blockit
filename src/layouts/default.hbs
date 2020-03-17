@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>    
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{content.head.keywords}}">
+    <meta name="author" content="{{content.head.author}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{content.head.theme-color}}"/>
+    {{> module-seo }}
+    <!-- Site Properties -->
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="{{root}}favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="{{root}}apple-touch-icon.png">
+    {{!-- Stylesheet area --}}
+    {{> module-styles }}
+</head>
+
+<body>
+    {{#unlesspage '404'}}
+    {{> component-header }}
+    {{/unlesspage}}
+    {{> body}}
+    {{#unlesspage '404'}}
+    {{> component-footer }}
+    {{/unlesspage}}
+    {{> module-scripts }}
+</body>
+</html>

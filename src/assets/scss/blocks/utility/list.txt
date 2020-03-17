@@ -1,0 +1,9 @@
+- breadcrumbs
+- pagination
+- socials icon
+- search form
+- login/register
+- comingsoon
+- legal terms
+- 404
+- app button

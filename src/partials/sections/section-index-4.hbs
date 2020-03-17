@@ -1,0 +1,28 @@
+<!-- section content begin -->
+<div class="uk-section in-margin-negative-top@s">
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-large in-classic-wrapper uk-margin-top .in-margin-negative-top@s uk-margin-bottom in-margin-medium-bottom@s">
+            <div class="uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-middle">
+                <div class="uk-margin-top uk-margin-right in-margin-remove-right@s">
+                    <h2>{{content.classic-text.heading}}</h2>
+                    <p class="in-margin-medium-bottom@s">{{content.classic-text.prefix}} <span class="uk-text-bold"><i class="fab fa-{{content.classic-text.icon}}"></i> {{content.classic-text.css}}</span> {{content.classic-text.suffix}}</p>
+                </div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-2@m">
+                <div class="uk-grid uk-grid-collapse uk-child-width-1-2@s uk-child-width-1-2@m uk-margin-left in-margin-remove-left@s uk-text-center in-tile-classic">
+                    {{#each content.classic-item}}
+                    <div class="uk-tile uk-inline-clip uk-transition-toggle" tabindex="0">
+                        <h4>{{template-name}}</h4>
+                        <img class="uk-margin-remove-bottom in-tile-hide" src="img/in-lazy-classic.svg" data-src="{{template-logo}}" alt="{{template-alt}}" width="180" height="60" data-uk-img>                        
+                        <span class="uk-label in-tile-hide">{{template-sales}} sales</span>
+                        <a href="{{template-url}}">
+                            <img class="uk-transition-slide-bottom uk-position-cover uk-align-center" src="{{template-image}}" alt="{{template-alt}}" width="261" height="150">
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- section content end -->
