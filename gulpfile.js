@@ -48,10 +48,19 @@ function resetPages(done) {
 function compileCss() {
     return merge(
         // uikit sass compile
-        src('src/assets/scss/main.scss')        
+        src('src/assets/scss/uikit.scss')        
         .pipe(newer('dist/css'))
         .pipe(sass().on('error', sass.logError))        
-        .pipe(rename('main.css'))
+        .pipe(rename('uikit.css'))
+        .pipe(beautify({css: {file_types: ['.css']} }))
+        .pipe(dest('dist/css')),
+
+        // style sass compile
+        src('src/assets/scss/style.scss')        
+        .pipe(newer('dist/css'))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoPrefixer())      
+        .pipe(rename('style.css'))        
         .pipe(beautify({css: {file_types: ['.css']} }))
         .pipe(dest('dist/css'))
     );
