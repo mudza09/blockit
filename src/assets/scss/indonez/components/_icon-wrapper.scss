@@ -15,17 +15,14 @@
         border-radius: 14px;
     }
     &.large {
-        width: 84px;
-        height: 84px;
-        border-radius: 30px;
+        width:92px;
+        height:92px;
+        border-radius: 34px;
     }
     &.circle {
         border-radius: 500px;
     }
     &.transparent {
-        background-color: transparent;
-    }
-    &.no-padding {
         background-color: transparent;
     }
 }

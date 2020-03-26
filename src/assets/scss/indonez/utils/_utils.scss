@@ -1,8 +1,3 @@
-/* button app */
-.in-button-app {
-    
-}
-
 /* brand colors */
 .brand-facebook,
 a.brand-facebook {            
@@ -43,18 +38,6 @@ a.generic-email {
     &:hover {
         background-color: lighten(#37474f, 6%);
     }
-}
-
-/* preloader animation keyframes */
-@keyframes preloader {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
-}
-
-/* image shadow */
-.in-img-shadow {
-    
 }
 
 /* offset margin */
