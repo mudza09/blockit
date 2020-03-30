@@ -1,0 +1,39 @@
+/*---------------- [ blokit testimoni variables ] ----------------*/
+$star-color:                               #f6c416 !default;
+$star-size:                                12px !default;
+
+
+/* [ in-testimoni-6 ] */
+.in-testimoni-6 {    
+    .fa-star {
+        color: $star-color;
+        font-size: $star-size;
+        position: relative;
+        top: 16px;
+    }
+    @media (max-width: 960px) {
+        .uk-float-right {
+            margin-bottom: -22px;
+        }  
+        .fa-star {
+            top: -26px;
+            left: 64px;
+        }
+    }
+}
+
+/* [ in-testimoni-7 ] */
+.in-testimoni-7 {    
+    &.uk-card {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* [ in-testimoni-8 ] */
+.in-testimoni-8 {    
+    &.uk-card {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+}
