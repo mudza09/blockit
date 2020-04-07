@@ -1,0 +1,132 @@
+/*---------------- [ blokit client logo variables ] ----------------*/
+$border-tile-width:                        1px !default;
+$border-tile-color:                        rgba(0, 0, 0, .09) !default;
+
+
+/* [ in-client-logo-1 ] */
+.in-client-logo-1 {
+    padding: 0 50px;
+    .uk-tile {
+        border: $border-tile-width solid $border-tile-color;
+        border-right: 0;
+        border-top: 0;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        &:first-child,
+        &:nth-child(6) {
+            border-left: 0;
+        }
+        &:nth-child(n+6) {
+            border-bottom: 0;
+        }
+        img {
+            opacity: 0.8;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }    
+}
+@media (max-width: 960px) {
+    .in-client-logo-1 {
+        padding: 0;
+        .uk-tile {
+            // border-right: $border-tile-width solid $border-tile-color;
+            border-left: 0;
+            border-right: 0;
+            &:nth-child(n+6) {
+                border-bottom: $border-tile-width solid $border-tile-color;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+/* [ in-client-logo-2 ] */
+.in-client-logo-2 {
+    .uk-tile {
+        border: $border-tile-width solid $border-tile-color;
+        img {
+            opacity: 0.8;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* [ in-client-logo-3 ] */
+.in-client-logo-3 {
+    .uk-tile {
+        padding: 10px 35px;
+        img {
+            opacity: 0.8;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* [ in-client-logo-4 ] */
+.in-client-logo-4 {
+    padding: 0 80px;
+    .uk-tile {
+        padding: 10px 35px;
+        img {
+            opacity: 0.8;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .in-client-logo-4 {
+        padding: 0;
+    }
+}
+
+/* [ in-client-logo-5 ] */
+.in-client-logo-5 {
+    .uk-tile {
+        border: $border-tile-width solid $border-tile-color;
+        border-right: 0;
+        border-top: 0;
+        padding: 50px;
+        &:first-child,
+        &:nth-child(4) {
+            border-left: 0;
+        }
+        &:nth-child(n+4) {
+            border-bottom: 0;
+        }
+        img {
+            opacity: 0.8;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }    
+}
+@media (max-width: 960px) {
+    .in-client-logo-5 {
+        .uk-tile {
+            border-left: 0;
+            border-right: 0;        
+            &:nth-child(n+4) {
+                border-bottom: $border-tile-width solid $border-tile-color;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
