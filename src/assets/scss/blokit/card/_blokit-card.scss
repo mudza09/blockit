@@ -1,0 +1,41 @@
+/*---------------- [ blokit card variables ] ----------------*/
+$card-color:                               #fff !default;
+$border-card-width:                        1px !default;
+$border-card-color:                        rgba(0, 0, 0, .09) !default;
+$border-card-accent:                       #2788ed !default;
+
+
+/* [ in-card-3 ] */
+.in-card-3 {
+    .uk-card-default {
+        border: $border-card-width solid $border-card-color;
+        background-color: $card-color;
+    }
+    img {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+/* [ in-card-4 ] */
+.in-card-4 {    
+    .uk-card-default {
+        border: $border-card-width solid $border-card-color;
+        background-color: $card-color;
+    }
+}
+
+/* [ in-card-8 ] */
+.in-card-8 {    
+    .uk-card {
+        border: $border-card-width solid $border-card-color;
+        border-top: 3px solid $border-card-accent;
+        background-color: $card-color;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        .uk-grid > div {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
