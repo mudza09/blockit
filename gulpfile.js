@@ -69,10 +69,23 @@ function compileCss() {
 // Vendor javascript concat task
 function compileJs() {
     return merge(
+        // js config deliver
+        src(['src/assets/js/*.js', '!src/assets/js/vendor/*.js'])
+        .pipe(newer('dist/js'))
+        .pipe(beautify({js: {file_types: ['.js']} }))
+        .pipe(dest('dist/js')),
+
+        // js main concat
+        src('src/assets/js/in-core/*.js')
+        .pipe(concat('in-core.min.js', {newLine: '\r\n\r\n'}))
+        .pipe(beautify({js: {file_types: ['.js']} }))
+        // .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
+        .pipe(dest('dist/js/vendor')),
+
         // js vendor
         src('src/assets/js/vendor/*.js')
-        .pipe(newer('dist/js'))
-        .pipe(dest('dist/js'))
+        .pipe(newer('dist/js/vendor'))
+        .pipe(dest('dist/js/vendor'))
     );
 };
 
@@ -118,6 +131,11 @@ function serveStatic() {
 
         // apple touch icon
         src('src/assets/static/apple-touch-icon.png')
+        .pipe(newer('dist'))
+        .pipe(dest('dist')),
+
+        // php file task
+        src('src/assets/php/*')
         .pipe(newer('dist'))
         .pipe(dest('dist'))
     );

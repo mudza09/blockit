@@ -2,15 +2,15 @@
 $card-color:                               #fff !default;
 $card-primary-color:                       #1e87f0 !default;
 $card-secondary-color:                     #222 !default;
-$border-card-width:                        1px !default;
-$border-card-color:                        rgba(0, 0, 0, .09) !default;
-$border-card-accent:                       #2788ed !default;
+$card-border-width:                        1px !default;
+$card-border-color:                        rgba(0, 0, 0, .09) !default;
+$card-border-accent:                       #2788ed !default;
 
 
 /* [ in-card-3 ] */
 .in-card-3 {
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
     }
     img {
@@ -22,7 +22,7 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-4 ] */
 .in-card-4 {    
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
     }
 }
@@ -30,8 +30,8 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-8 ] */
 .in-card-8 {    
     .uk-card {
-        border: $border-card-width solid $border-card-color;
-        border-top: 3px solid $border-card-accent;
+        border: $card-border-width solid $card-border-color;
+        border-top: 3px solid $card-border-accent;
         background-color: $card-color;
         padding-top: 0px;
         padding-bottom: 0px;
@@ -45,10 +45,10 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-9 ] */
 .in-card-9 {    
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
         .uk-tile {
-            border: $border-card-width solid $border-card-color;
+            border: $card-border-width solid $card-border-color;
             border-right: 0;
             border-top: 0;
             padding: 25px 20px;
@@ -82,7 +82,7 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-10 ] */
 .in-card-10 {    
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
         hr {
             border-width: 2px;
@@ -107,7 +107,7 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-11 ] */
 .in-card-11 {
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
         .in-icon-wrap {
             background-color: rgba(30, 135, 240, .12);
@@ -125,15 +125,15 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-12 ] */
 .in-card-12 {
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
     }
     .uk-card-badge {
         position: absolute;
         top: -12px;
         right: -12px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
     .uk-position-bottom-right {
         i {
@@ -147,7 +147,7 @@ $border-card-accent:                       #2788ed !default;
 /* [ in-card-13 ] */
 .in-card-13 {
     .uk-card-default {
-        border: $border-card-width solid $border-card-color;
+        border: $card-border-width solid $card-border-color;
         background-color: $card-color;
         img {
             border-top-left-radius: 4px;
@@ -188,7 +188,7 @@ $border-card-accent:                       #2788ed !default;
             width: 80%;
             margin: -30px auto 0;
             padding: 19px 18px 15px;
-            border: $border-card-width solid $border-card-color;
+            border: $card-border-width solid $card-border-color;
             background-color: $card-color;
             border-radius: 5px;
             position: relative;

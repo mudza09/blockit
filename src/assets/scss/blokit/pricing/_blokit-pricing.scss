@@ -1,45 +1,45 @@
 /*---------------- [ blokit pricing variables ] ----------------*/
-$border-width:                             2px !default;
-$border-width-2:                           1px !default;
-$border-radius:                            12px !default;
-$border-radius-2:                          8px !default;
-$border-color:                             rgba(0, 0, 0, .09) !default;
-$border-color-hover:                       rgba(0, 0, 0, .16) !default;
-$border-color-featured:                    #2788ed !default;
+$pricing-border-width:                     2px !default;
+$pricing-border-width-2:                   1px !default;
+$pricing-border-radius:                    12px !default;
+$pricing-border-radius-2:                  8px !default;
+$pricing-border-color:                     rgba(0, 0, 0, .09) !default;
+$pricing-border-color-hover:               rgba(0, 0, 0, .16) !default;
+$pricing-border-color-featured:            #2788ed !default;
 $pricing-background:                       #fff !default;
 $pricing-background-hover:                 rgba(10, 5, 5, 0.01) !default;
 
-$featured-background-hover:                lighten(#468efc, 35%) !default;
+$pricing-featured-background-hover:        lighten(#468efc, 35%) !default;
 
-$title-color:                              #999 !default;
-$price-color:                              #333 !default;
-$label-radius:                             4px !default;
-$icon-color:                               rgba(0, 0, 0, .1) !default;
+$pricing-title-color:                      #999 !default;
+$pricing-price-color:                      #333 !default;
+$pricing-label-radius:                     4px !default;
+$pricing-icon-color:                       rgba(0, 0, 0, .1) !default;
 
 
 /* [ in-pricing-1 ] */
 .in-pricing-1 {    
     .uk-card {
         overflow: hidden;
-        border-radius: $border-radius;
-        border: $border-width solid $border-color;
+        border-radius: $pricing-border-radius;
+        border: $pricing-border-width solid $pricing-border-color;
         transition: all ease 600ms;        
     }
     .uk-card-default {
         background-color: $pricing-background;
         &:hover {
             background-color: $pricing-background-hover;
-            border-color: $border-color-hover;
+            border-color: $pricing-border-color-hover;
         }
     }
     .uk-card-header {
         h3 {
             margin: 12px 0 -20px;
-            color: $title-color;
+            color: $pricing-title-color;
         }
         h4 {
             margin-bottom: 2px;
-            color: $price-color;
+            color: $pricing-price-color;
         }
         .in-pricing-small {
             font-size: 24px;
@@ -52,8 +52,8 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
             margin-bottom: -25px;
         }
         .uk-label {
-            border-radius: $label-radius;
-            background-color: $title-color;
+            border-radius: $pricing-label-radius;
+            background-color: $pricing-title-color;
         }
         .uk-card-badge {
             margin: 10px 8px 0 0;
@@ -69,22 +69,22 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
             font-family: 'Font Awesome 5 Free'; 
             font-weight: 900; 
             content: "\f00c";
-            color: $border-color-featured;
+            color: $pricing-border-color-featured;
             top: 1px;
             left: 4px;
         }
     }
     &.in-pricing-featured {
         .uk-card {
-            border-color: $border-color-featured;
+            border-color: $pricing-border-color-featured;
             &:hover {
-                background-color: $featured-background-hover;
-                border-color: $border-color-featured;
+                background-color: $pricing-featured-background-hover;
+                border-color: $pricing-border-color-featured;
             }
         }
         .uk-card-header {
             .uk-label {
-                background-color: $border-color-featured;
+                background-color: $pricing-border-color-featured;
             }
         }
     }
@@ -97,17 +97,17 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
     } 
     .uk-card-default {
         background-color: rgba(0, 0, 0, .02);
-        border-bottom-left-radius: $border-radius-2;
-        border-bottom-right-radius: $border-radius-2;
+        border-bottom-left-radius: $pricing-border-radius-2;
+        border-bottom-right-radius: $pricing-border-radius-2;
         &:hover {
             background-color: #fff;
         }
     }
     .uk-card-header {
-        border-top-left-radius: $border-radius-2;
-        border-top-right-radius: $border-radius-2;
+        border-top-left-radius: $pricing-border-radius-2;
+        border-top-right-radius: $pricing-border-radius-2;
         border-top: 0;
-        background-color: $title-color;
+        background-color: $pricing-title-color;
         h3 {
             margin: 12px 0 -20px;
             color: #fff;
@@ -125,27 +125,27 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
     }
     .uk-card-body {
         padding-top: 25px;
-        box-shadow: inset 0px 0px 0px $border-width-2 $border-color;
-        border-bottom-left-radius: $border-radius-2;
-        border-bottom-right-radius: $border-radius-2;
+        box-shadow: inset 0px 0px 0px $pricing-border-width-2 $pricing-border-color;
+        border-bottom-left-radius: $pricing-border-radius-2;
+        border-bottom-right-radius: $pricing-border-radius-2;
         transition: all ease 600ms;
         h5, i {
-            color: $title-color;
+            color: $pricing-title-color;
         }        
     }
     &.in-pricing-featured {
         .uk-card {
             &:hover {
-                background-color: $featured-background-hover;
-                border-color: $border-color-featured;
+                background-color: $pricing-featured-background-hover;
+                border-color: $pricing-border-color-featured;
             }
         }
         .uk-card-header {
-            background-color: $border-color-featured;
+            background-color: $pricing-border-color-featured;
         }
         .uk-card-body {
             h5, i {
-                color: $border-color-featured;
+                color: $pricing-border-color-featured;
             }            
         }
     }
@@ -155,8 +155,8 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
 .in-pricing-3 {    
     .uk-card {
         overflow: hidden;
-        border-radius: $border-radius-2;
-        border: $border-width-2 solid $border-color;
+        border-radius: $pricing-border-radius-2;
+        border: $pricing-border-width-2 solid $pricing-border-color;
         border-top: 0;
         transition: all ease 600ms;        
     }
@@ -164,20 +164,20 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
         background-color: $pricing-background;
         &:hover {
             background-color: $pricing-background-hover;
-            border-color: $border-color-hover;
+            border-color: $pricing-border-color-hover;
         }
     }
     .uk-card-header {
-        border-top: 4px solid $title-color;
-        border-radius: $border-radius-2;
+        border-top: 4px solid $pricing-title-color;
+        border-radius: $pricing-border-radius-2;
         h4 {
             margin-bottom: -5px;
-            color: $price-color;
+            color: $pricing-price-color;
         }
         h6 {
             letter-spacing: 2px;
             margin: 12px 0 20px;
-            color: $title-color;
+            color: $pricing-title-color;
         }
         .in-pricing-small {
             font-size: 24px;
@@ -187,33 +187,33 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
         }
         .uk-label {
             background: transparent;
-            color: $title-color;
+            color: $pricing-title-color;
         }
     }
     &.in-pricing-featured {
         .uk-card {
-            border-color: $border-color-featured;
+            border-color: $pricing-border-color-featured;
             &:hover {
-                background-color: $featured-background-hover;
-                border-color: $border-color-featured;
+                background-color: $pricing-featured-background-hover;
+                border-color: $pricing-border-color-featured;
             }
         }
         .uk-card-header {
-            border-color: $border-color-featured;
+            border-color: $pricing-border-color-featured;
             h6 {
-                color: $border-color-featured;
+                color: $pricing-border-color-featured;
             }
         }
         .uk-card-body {
             .uk-list-divider > li:nth-child(n+2) {
-                border-color: lighten($border-color-featured, 15%);
+                border-color: lighten($pricing-border-color-featured, 15%);
             }
             .uk-button-default {
-                border-color: lighten($border-color-featured, 15%);
-                color: $border-color-featured;
+                border-color: lighten($pricing-border-color-featured, 15%);
+                color: $pricing-border-color-featured;
                 &:hover {
-                    border-color: darken($border-color-featured, 5%);
-                    color: darken($border-color-featured, 10%);
+                    border-color: darken($pricing-border-color-featured, 5%);
+                    color: darken($pricing-border-color-featured, 10%);
                 }
             }
         }
@@ -224,25 +224,25 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
 .in-pricing-4 {    
     .uk-card {
         overflow: hidden;
-        border-radius: $border-radius-2;
-        border: $border-width-2 solid $border-color;
+        border-radius: $pricing-border-radius-2;
+        border: $pricing-border-width-2 solid $pricing-border-color;
         transition: all ease 600ms;        
     }
     .uk-card-default {
         background-color: $pricing-background;
         &:hover {
             background-color: $pricing-background-hover;
-            border-color: $border-color-hover;
+            border-color: $pricing-border-color-hover;
         }
     }
     .uk-card-header {
         h4 {
             margin-bottom: -5px;
-            color: $price-color;
+            color: $pricing-price-color;
         }
         h6 {
             letter-spacing: 2px;
-            color: $title-color;
+            color: $pricing-title-color;
         }
         .in-pricing-small {
             font-size: 24px;
@@ -259,27 +259,27 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
             font-family: 'Font Awesome 5 Free'; 
             font-weight: 900; 
             content: "\f00c";
-            color: $border-color-featured;
+            color: $pricing-border-color-featured;
             top: 1px;
             left: 4px;
         }  
     }
     &.in-pricing-featured {
         .uk-card {
-            border-color: $border-color-featured;
+            border-color: $pricing-border-color-featured;
             &:hover {
-                background-color: $featured-background-hover;
-                border-color: $border-color-featured;
+                background-color: $pricing-featured-background-hover;
+                border-color: $pricing-border-color-featured;
             }
         }
         .uk-card-header {
-            border-color: $border-color-featured;
+            border-color: $pricing-border-color-featured;
             .in-icon-wrap {
-                background-color: $border-color-featured;
+                background-color: $pricing-border-color-featured;
                 color: #fff;
             }
             h6 {
-                color: $border-color-featured;
+                color: $pricing-border-color-featured;
             }
         }
     }
@@ -289,15 +289,15 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
 .in-pricing-5 {    
     .uk-card {
         overflow: hidden;
-        border-radius: $border-radius;
-        border: $border-width-2 solid $border-color;
+        border-radius: $pricing-border-radius;
+        border: $pricing-border-width-2 solid $pricing-border-color;
         transition: all ease 600ms;        
     }
     .uk-card-default {
         background-color: $pricing-background;
         &:hover {
             background-color: $pricing-background-hover;
-            border-color: $border-color-hover;
+            border-color: $pricing-border-color-hover;
         }
     }
     .uk-card-header {
@@ -312,7 +312,7 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
         }
         .in-pricing-month {
             font-size: 24px;
-            color: $title-color;
+            color: $pricing-title-color;
             margin-left: -10px;
         }
         hr {
@@ -328,20 +328,20 @@ $icon-color:                               rgba(0, 0, 0, .1) !default;
             padding: 14px 25px 9px 25px;
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
-            background-color: $title-color;
+            background-color: $pricing-title-color;
         }
     }
     &.in-pricing-featured {
         .uk-card {
-            border-color: $border-color-featured;
+            border-color: $pricing-border-color-featured;
             &:hover {
-                background-color: $featured-background-hover;
-                border-color: $border-color-featured;
+                background-color: $pricing-featured-background-hover;
+                border-color: $pricing-border-color-featured;
             }
         }
         .uk-card-header {
             .uk-label {
-                background-color: $border-color-featured;
+                background-color: $pricing-border-color-featured;
             }
         }
     }

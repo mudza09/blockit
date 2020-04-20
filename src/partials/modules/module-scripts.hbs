@@ -1,7 +1,6 @@
-<!-- Javascript -->
-{{!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15875991-2"></script>
-<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-15875991-2');</script> --}}
-<script src="{{root}}js/uikit.min.js"></script>
-{{#ifequal page-type 'product'}}
-<script>(function () {var d = document, s = d.createElement('script'); s.src = 'https://indonez.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s);})();</script>
-{{/ifequal}}
+<script src="{{root}}js/vendor/uikit.min.js"></script>
+<script src="{{root}}js/vendor/jquery.slim.min.js"></script>
+<script src="{{root}}js/vendor/in-core.min.js"></script>
+{{#ifpage 'counter'}}
+<script src="{{root}}js/config-counter.js"></script>
+{{/ifpage}}

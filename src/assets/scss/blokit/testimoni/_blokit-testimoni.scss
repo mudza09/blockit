@@ -1,13 +1,13 @@
 /*---------------- [ blokit testimoni variables ] ----------------*/
-$star-color:                               #f6c416 !default;
-$star-size:                                12px !default;
+$testimoni-star-color:                     #f6c416 !default;
+$testimoni-star-size:                      12px !default;
 
 
 /* [ in-testimoni-6 ] */
 .in-testimoni-6 {    
     .fa-star {
-        color: $star-color;
-        font-size: $star-size;
+        color: $testimoni-star-color;
+        font-size: $testimoni-star-size;
         position: relative;
         top: 16px;
     }

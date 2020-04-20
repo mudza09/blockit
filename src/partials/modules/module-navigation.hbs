@@ -1,10 +1,49 @@
 <!-- main navigation begin -->
-<nav class="uk-navbar-container" data-uk-navbar>
-    <div class="in-header-socials">
-        {{#each content.header.socials}}
-        <a href="{{url}}" class="fab fa-{{icon}}"><span>{{anchor}}</span></a>
-        {{/each}}
-    </div>
-    <a class="uk-button uk-button-small uk-button-default uk-border-rounded uk-width-expand uk-visible@m" href="{{root}}{{content.header.discount-url}}">{{content.header.discount-label}}<span class="uk-label uk-margin-small-left">{{content.header.discount-percent}}% Off</span></a>
+<nav class="uk-navbar-container">
+    <div class="uk-container uk-container-expand" data-uk-navbar>        
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="#">Blokit</a>            
+        </div>
+        <div class="uk-navbar-right">   
+            <ul class="uk-navbar-nav">
+                {{#each navigation.nav}}
+                <li>
+                    <a href="{{root}}{{link}}">{{title}}</a>
+                    {{#if subnav}}
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            {{#each subnav}}
+                            <li><a href="{{root}}{{link}}">{{title}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{else}}
+                    {{#if subnav-multiple}}
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    {{#each subnav-multiple}}
+                                    <li><a href="{{root}}{{link}}">{{title}}{{#ifequal title 'Documentation'}}<i class="fas {{icon}} fa-sm"></i>{{/ifequal}}{{#ifequal title 'Legal Docs'}}<i
+                                                class="fas {{icon}} fa-sm"></i>{{/ifequal}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li>
+                                        <p>{{#subnav-multiple-text}}{{text}}{{/subnav-multiple-text}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>    
 </nav>
 <!-- main navigation end -->

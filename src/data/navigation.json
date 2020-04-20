@@ -1,0 +1,66 @@
+{    
+    "nav": [
+        {
+            "title": "Home",
+            "link": "index.html"
+        },
+        {
+            "title": "Feature",
+            "link": "feature.html"
+        },        
+        {
+            "title": "Team",
+            "link": "team.html"
+            
+        },
+        {
+            "title": "Pricing",
+            "link": "pricing.html"
+        },
+        {
+            "title": "Testimonial",
+            "link": "testimonial.html"
+        },
+        {
+            "title": "Contact",
+            "link": "contact.html"
+        },
+        {
+            "title": "Client logo",
+            "link": "client-logo.html"
+        },
+        {
+            "title": "Card",
+            "link": "card.html"
+        },
+        {
+            "title": "Blog",
+            "link": "blog.html"
+        },
+        {
+            "title": "Counter",
+            "link": "counter.html"
+        },
+        {
+            "title": "Company",
+            "link": "#",            
+            "subnav": [
+                {
+                    "title": "About",
+                    "link": "about.html",
+                    "breadcrumb": "About us"
+                },
+                {
+                    "title": "Contact",
+                    "link": "contact.html",
+                    "breadcrumb": "Contact us"
+                },
+                {
+                    "title": "Careers",
+                    "link": "careers.html",
+                    "breadcrumb": "Careers"
+                }
+            ]
+        }
+    ]
+}
