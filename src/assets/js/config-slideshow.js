@@ -14,7 +14,7 @@
 
 let slideshowApp = {
     //----------- 1. Homepage uikit slideshow -----------
-    theme_homeSlideshow: function () {
+    theme_slideshow: function () {
         let slideshow = UIkit.slideshow('.in-slideshow', {
             autoplay: true,
             autoplayInterval: 7000,
@@ -24,7 +24,7 @@ let slideshowApp = {
         });
     },
     theme_init: function () {
-        slideshowApp.theme_homeSlideshow();
+        slideshowApp.theme_slideshow();
     }
 }
 

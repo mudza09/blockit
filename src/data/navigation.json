@@ -40,27 +40,6 @@
         {
             "title": "Counter",
             "link": "counter.html"
-        },
-        {
-            "title": "Company",
-            "link": "#",            
-            "subnav": [
-                {
-                    "title": "About",
-                    "link": "about.html",
-                    "breadcrumb": "About us"
-                },
-                {
-                    "title": "Contact",
-                    "link": "contact.html",
-                    "breadcrumb": "Contact us"
-                },
-                {
-                    "title": "Careers",
-                    "link": "careers.html",
-                    "breadcrumb": "Careers"
-                }
-            ]
         }
     ]
 }

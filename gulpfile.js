@@ -79,7 +79,7 @@ function compileJs() {
         src('src/assets/js/in-core/*.js')
         .pipe(concat('in-core.min.js', {newLine: '\r\n\r\n'}))
         .pipe(beautify({js: {file_types: ['.js']} }))
-        // .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
+        .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
         .pipe(dest('dist/js/vendor')),
 
         // js vendor
