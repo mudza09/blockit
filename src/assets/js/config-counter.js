@@ -7,16 +7,21 @@
  * Indonez Copyright 2020 All Rights Reserved.
  * -------------------------------------------------------------------------- 
  * javascript handle initialization
-    1. Counter config
+    1. Counter config 1
+    2. Counter config 2
+    3. Counter config 3
+    4. Counter config 4
+    5. Counter config 5
+    6. Counter config 6
  * -------------------------------------------------------------------------- */
 
 'use strict';
 
 let counterApp = {
-    //---------- 1. Counter config -----------
+    //---------- 1. Counter config 1 -----------
     theme_counter_1: function () {
         var counter = new counterUp({
-            selector: '.in-counter1',
+            selector: '.count-1',
             start: 0,
             duration: 3200,
             intvalues: true,
@@ -26,12 +31,12 @@ let counterApp = {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
-        observer.observe(document.querySelector('.in-counter1'));
-        // counter.start();      
+        observer.observe(document.querySelector('.count-1'));
     },
+    //---------- 2. Counter config 2 -----------
     theme_counter_2: function () {
         var counter = new counterUp({
-            selector: '.in-counter2',
+            selector: '.count-2',
             start: 0,
             duration: 3200,
             intvalues: true,
@@ -41,12 +46,12 @@ let counterApp = {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
-        observer.observe(document.querySelector('.in-counter2'));    
-        // counter.start();      
+        observer.observe(document.querySelector('.count-2'));  
     },
+    //---------- 3. Counter config 3 -----------
     theme_counter_3: function () {
         var counter = new counterUp({
-            selector: '.in-counter3',
+            selector: '.count-3',
             start: 0,
             duration: 3200,
             intvalues: true,
@@ -56,12 +61,12 @@ let counterApp = {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
-        observer.observe(document.querySelector('.in-counter3'));    
-        // counter.start();      
+        observer.observe(document.querySelector('.count-3'));  
     },
+    //---------- 4. Counter config 4 -----------
     theme_counter_4: function () {
         var counter = new counterUp({
-            selector: '.in-counter4',
+            selector: '.count-4',
             start: 0,
             duration: 3200,
             intvalues: true,
@@ -71,12 +76,12 @@ let counterApp = {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
-        observer.observe(document.querySelector('.in-counter4'));    
-        // counter.start();      
+        observer.observe(document.querySelector('.count-4'));    
     },
+    //---------- 5. Counter config 5 -----------
     theme_counter_5: function () {
         var counter = new counterUp({
-            selector: '.in-counter5',
+            selector: '.count-5',
             start: 0,
             duration: 3200,
             intvalues: true,
@@ -86,12 +91,12 @@ let counterApp = {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
-        observer.observe(document.querySelector('.in-counter5'));    
-        // counter.start();      
+        observer.observe(document.querySelector('.count-5'));   
     },
+    //---------- 6. Counter config 6 -----------
     theme_counter_6: function () {
         var counter = new counterUp({
-            selector: '.in-counter6',
+            selector: '.count-6',
             start: 0,
             duration: 3200,
             intvalues: true,
@@ -101,8 +106,7 @@ let counterApp = {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
-        observer.observe(document.querySelector('.in-counter6'));    
-        // counter.start();      
+        observer.observe(document.querySelector('.count-6'));   
     },
     // theme init
     theme_init: function () {

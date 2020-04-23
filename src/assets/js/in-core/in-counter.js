@@ -1,4 +1,4 @@
-/*! in-counter.js | https://github.com/DarioCorno/counterUp | DarioCorno | MIT License */
+/* in-counter.js | https://github.com/DarioCorno/counterUp | DarioCorno | MIT License */
 function counterUp(_props) {
 	"use strict";
 

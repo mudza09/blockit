@@ -1,14 +1,14 @@
 // main.scss
 
 // 1. Your custom variables.
-@import "theme/_import.scss";
+@import "uikit/_import.scss";
 
 // 2. Import default variables and available mixins.
 @import "../../../node_modules/uikit/src/scss/variables.scss";
 @import "../../../node_modules/uikit/src/scss/mixins.scss";
 
 // 3. Your custom mixins overwrites.
-@import "theme/_import.scss";
+@import "uikit/_import.scss";
 
 // 4. Import UIkit
 @import "../../../node_modules/uikit/src/scss/uikit.scss";

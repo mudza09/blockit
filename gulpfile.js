@@ -24,18 +24,23 @@ function clean() {
 // Handlebar compile task
 function compileHtml() {
     return src('src/pages/**/*.hbs')
-    .pipe(newer('dist'))
-    .pipe(panini({
-        root: 'src/pages/',
-        layouts: 'src/layouts/',
-        partials: 'src/partials/',
-        data: 'src/data/'
-        })
-    )    
-    .pipe(extReplace('.html'))
-    // .pipe(beautify({html: {file_types: ['.html']} }))
-    // .pipe(validator())
-    .pipe(dest('dist'));
+        .pipe(newer('dist'))
+        .pipe(panini({
+            root: 'src/pages/',
+            layouts: 'src/layouts/',
+            partials: 'src/partials/',
+            data: 'src/data/'
+        }))
+        .pipe(extReplace('.html'))
+        .pipe(beautify({
+            html: {
+                file_types: ['.html'],
+                max_preserve_newlines: 0,
+                preserve_newlines: true,
+            }
+        }))
+        // .pipe(validator())
+        .pipe(dest('dist'));
 };
 
 // Panini reload cache
@@ -78,8 +83,7 @@ function compileJs() {
         // js main concat
         src('src/assets/js/in-core/*.js')
         .pipe(concat('in-core.min.js', {newLine: '\r\n\r\n'}))
-        .pipe(beautify({js: {file_types: ['.js']} }))
-        .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
+        // .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
         .pipe(dest('dist/js/vendor')),
 
         // js vendor
@@ -91,19 +95,30 @@ function compileJs() {
 
 // Image optimization task
 function minifyImg() {
-    
     return src('src/assets/img/**/*')
-    .pipe(newer('dist/img'))
-    .pipe(
-        imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 80, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo({plugins: [{removeViewBox: true},{cleanupIDs: false}]
-            })
-        ])
-    )
-    .pipe(dest('dist/img'));
+        .pipe(newer('dist/img'))
+        .pipe(
+            imagemin([
+                imagemin.gifsicle({
+                    interlaced: true
+                }),
+                imagemin.mozjpeg({
+                    quality: 80,
+                    progressive: true
+                }),
+                imagemin.optipng({
+                    optimizationLevel: 5
+                }),
+                imagemin.svgo({
+                    plugins: [{
+                        removeViewBox: true
+                    }, {
+                        cleanupIDs: false
+                    }]
+                })
+            ])
+        )
+        .pipe(dest('dist/img'));
 };
 
 // Static file task
@@ -146,7 +161,7 @@ function minifyDemo() {
     return merge(
         // html minify
         src('dist/**/*.html')
-        .pipe(minify({minify: true, minifyHTML: {collapseWhitespace: true, conservativeCollapse: true}}))
+        .pipe(minify({minify: true, minifyHTML: {collapseWhitespace: true, removeComments: true}}))
         .pipe(dest('dist/')),
 
         // css minify

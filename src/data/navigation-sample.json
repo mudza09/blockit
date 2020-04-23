@@ -1,0 +1,108 @@
+{
+    "nav": [
+        {
+            "title": "Home",
+            "link": "index.html"
+        },
+        {
+            "title": "Feature",
+            "link": "feature.html"
+        },
+        {
+            "title": "Team",
+            "link": "team.html"
+            
+        },
+        {
+            "title": "Pricing",
+            "link": "pricing.html"
+        },
+        {
+            "title": "Testimonial",
+            "link": "testimonial.html"
+        },
+        {
+            "title": "Contact",
+            "link": "contact.html"
+        },
+        {
+            "title": "Client logo",
+            "link": "client-logo.html"
+        },
+        {
+            "title": "Card",
+            "link": "card.html"
+        },
+        {
+            "title": "Blog",
+            "link": "blog.html"
+        },
+        {
+            "title": "Counter",
+            "link": "counter.html"
+        },
+        {
+            "title": "Dropdown 1",
+            "link": "#",
+            "dropdown": [
+                {
+                    "standard": [ 
+                        {
+                            "title": "Sample link 1",
+                            "link": "blog.html"
+                        },
+                        {
+                            "title": "Sample link 2",
+                            "link": "#"
+                        },
+                        {
+                            "title": "Sample link 3",
+                            "link": "#"
+                        },
+                        {
+                            "title": "Sample link 4",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Dropdown 2",
+            "link": "#",
+            "dropdown": [
+                {
+                    "multiple": [
+                        {
+                            "title": "Sample link 5",
+                            "link": "team.html",
+                            "icon": {
+                                "name": "fa-external-link-square-alt"
+                            }
+                        },
+                        {
+                            "title": "Sample link 6",
+                            "link": "#"
+                        },
+                        {
+                            "title": "Sample link 7",
+                            "link": "#"
+                        },
+                        {
+                            "title": "Sample link 8",
+                            "link": "#",
+                            "icon": {
+                                "name": "fa-gavel"
+                            }
+                        }
+                    ],
+                    "multiple-text": [
+                        {
+                            "text": "Adipiscing elit sed do eiusmod incididunt ut labore dolore magna lorem ipsum sit dolor amet consectetur"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

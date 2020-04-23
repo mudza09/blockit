@@ -1,4 +1,4 @@
-/*! in-contactform.js | https://github.com/Divlo/Contact-Form | Divlo | MIT License */
+/* in-contactform.js | https://github.com/Divlo/Contact-Form | Divlo | MIT License */
 function serialize(form) {
 	return Array.from(
 		new FormData(form),

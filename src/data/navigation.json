@@ -1,4 +1,4 @@
-{    
+{
     "nav": [
         {
             "title": "Home",
@@ -7,7 +7,7 @@
         {
             "title": "Feature",
             "link": "feature.html"
-        },        
+        },
         {
             "title": "Team",
             "link": "team.html"
@@ -40,6 +40,10 @@
         {
             "title": "Counter",
             "link": "counter.html"
+        },
+        {
+            "title": "Faq",
+            "link": "faq.html"
         }
     ]
 }
