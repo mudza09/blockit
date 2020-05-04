@@ -6,18 +6,7 @@
 
 // Variables
 // ========================================================================
-$button-line-height:                             42px !default;
-$button-small-line-height:                       32px !default;
-$button-large-line-height:                       57px !default;
 
-$button-default-background:                      transparent !default;
-$button-default-color:                           #999 !default;
-$button-default-hover-color:                     darken($button-default-color, 5%) !default;
-
-$button-secondary-background:                    #999 !default;
-
-$button-border-width:                            1px !default;
-$button-default-border:                          #ccc !default;
 
 
 // Component
@@ -34,13 +23,6 @@ $button-default-border:                          #ccc !default;
 
 // Style modifiers
 // ========================================================================
-@mixin hook-button-default(){ 
-    box-shadow: inset 0px 0px 0px $button-border-width $button-default-border;
-}
-@mixin hook-button-default-hover(){ 
-    border-color: darken($button-default-border, 5%); 
-}
-
 
 //
 // Primary

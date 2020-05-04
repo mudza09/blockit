@@ -1,0 +1,16 @@
+// blokit blog variables
+$blog-color:                               #fff !default;
+$blog-primary-color:                       #1e87f0 !default;
+$blog-border-width:                        1px !default;
+$blog-border-color:                        rgba(0, 0, 0, .09) !default;
+$blog-border-accent:                       #2788ed !default;
+$blog-border-radius:                       5px !default;
+
+
+/* blog-style */
+@import "blog-1.scss";
+@import "blog-3.scss";
+@import "blog-4.scss";
+
+/* blog-widget */
+@import "widget.scss";

@@ -1,0 +1,26 @@
+// UIkit accordion variables
+// ========================================================================
+$accordion-item-margin-top:                     0px !default;
+$accordion-title-font-size:                     1.176rem !default;
+$accordion-title-line-height:                   1.4 !default;
+$accordion-title-color:                         #333 !default;
+$accordion-title-hover-color:                   #666 !default;
+$accordion-content-margin-top:                  20px !default;
+
+
+// blokIt faq variables
+// ========================================================================
+$faq-color:                                     #fff !default;
+$faq-primary-color:                             #1e87f0 !default;
+$faq-border-width:                              1px !default;
+$faq-border-width-2:                            2px !default;
+$faq-border-color:                              rgba(0, 0, 0, .09) !default;
+$faq-border-accent:                             #2788ed !default;
+$faq-border-radius:                             5px !default;
+$faq-border-radius-2 :                          12px !default;
+
+
+/* faq-style */
+@import "faq-1.scss";
+@import "faq-2.scss";
+@import "faq-3.scss";

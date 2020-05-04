@@ -7,111 +7,41 @@
  * Indonez Copyright 2020 All Rights Reserved.
  * ------------------------------------------------------------------
 [Table of contents]
-    1. layout
-        1.1. base
-        1.2. header
-        1.3. sticky menu
-        1.4. mobile navidation
-        1.5. theme layout
-        1.6. blog
-        1.7. footer
-    2. components
-        2.1. slideshow
-        2.2. breadcrumb
-        2.3. icon wrapper
-        2.4. custom card
-        2.5. roadmap
-        2.6. help center
-        2.7. widget
-        2.8. plyr.io
-        2.9. pricing
-        2.10. to top
-        2.11. sign in
-    3. utils
-        3.1. utils
-        3.2. fontawesome icons
+    1.1. base
+    1.2. header
+    1.3. sticky menu
+    1.4. mobile navidation
+    1.5. theme layout
+    1.6. blog
+    1.7. footer
 ------------------------------------------------------------------ */
 
-/* [ 1.1. base ] */
-@import "indonez/base/_base.scss";
+/* [ BLOKIT BASE ] */
+@import "blokit/base/blokit-base.scss";
 
-/* [ 1.2. header ] */
-@import "indonez/layouts/_header.scss";
+/* [ BLOKIT NAVIGATION ] */
+@import "blokit/navigation/blokit-navigation.scss";
 
-/* [ 1.3. sticky menu ] */
-@import "indonez/components/_sticky.scss";
+/* [ BLOKIT PRICING ] */
+@import "blokit/pricing/blokit-pricing.scss";
 
-/* [ 1.4. mobile nagivation ] */
-@import "indonez/components/_mobile-nav.scss";
+/* [ BLOKIT TESTIMONI ] */
+@import "blokit/testimoni/blokit-testimoni.scss";
 
-/* [ 1.5. theme layout ] */
-@import "indonez/layouts/_theme-layout.scss";
+/* [ BLOKIT CLIENT LOGO ] */
+@import "blokit/client-logo/blokit-client-logo.scss";
 
-/* [ 1.6. blog ] */
-@import "indonez/layouts/_article.scss";
+/* [ BLOKIT CARD ] */
+@import "blokit/card/blokit-card.scss";
 
-/* [ 1.7. footer ] */
-@import "indonez/layouts/_footer.scss";
+/* [ BLOKIT BLOG ] */
+@import "blokit/blog/blokit-blog.scss";
 
-/* [ 2.1. slideshow ] */
-@import "indonez/components/_slideshow.scss";
+/* [ BLOKIT FAQ ] */
+@import "blokit/faq/blokit-faq.scss";
 
-/* [ 2.2. breadcrumb ] */
-@import "indonez/components/_breadcrumb.scss";
+/* [ BLOKIT COUNTER ] */
+@import "blokit/counter/blokit-counter.scss";
 
-/* [ 2.3. icon wrapper ] */
-@import "indonez/components/_icon-wrapper.scss";
-
-/* [ 2.4. custom card ] */
-@import "indonez/components/_custom-card.scss";
-
-/* [ 2.5. roadmap ] */
-@import "indonez/components/_roadmap.scss";
-
-/* [ 2.6. help center ] */
-@import "indonez/components/_help-center.scss";
-
-/* [ 2.7. widget ] */
-@import "indonez/components/_widget.scss";
-
-/* [ 2.8. plyr.io ] */
-@import "indonez/components/_plyr.scss";
-
-/* [ 2.9. pricing ] */
-@import "indonez/components/_pricing.scss";
-
-/* [ 2.10. to top ] */
-@import "indonez/components/_totop.scss";
-
-/* [ 2.11. sign in ] */
-@import "indonez/components/_signin.scss";
-
-/* [ 3.1. utils ] */
-@import "indonez/utils/_utils.scss";
-
-/* [ 3.2. fontawesome icons ] */
-@import "indonez/utils/_icons.scss";
-
-/* [ 4.1. blokit pricing ] */
-@import "blokit/pricing/_blokit-pricing.scss";
-
-/* [ 4.2. blokit testimoni ] */
-@import "blokit/testimoni/_blokit-testimoni.scss";
-
-/* [ 4.3. blokit client logo ] */
-@import "blokit/client-logo/_blokit-client-logo.scss";
-
-/* [ 4.5. blokit card ] */
-@import "blokit/card/_blokit-card.scss";
-
-/* [ 4.6. blokit blog ] */
-@import "blokit/blog/_blokit-blog.scss";
-
-/* [ 4.7. blokit counter ] */
-@import "blokit/counter/_blokit-counter.scss";
-
-/* [ 4.8. blokit utility ] */
-@import "blokit/utility/_blokit-utility.scss";
-
-/* [ 4.9. blokit faq ] */
-@import "blokit/faq/_blokit-faq.scss";
+/* [ BLOKIT UTILITY ] */
+@import "blokit/utility/blokit-utility.scss";

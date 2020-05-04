@@ -1,0 +1,15 @@
+// blokit counter variables
+$counter-color:                               #fff !default;
+$counter-primary-color:                       #1e87f0 !default;
+$counter-border-width:                        1px !default;
+$counter-border-width-2:                      2px !default;
+$counter-border-color:                        rgba(0, 0, 0, .09) !default;
+$counter-border-accent:                       #2788ed !default;
+$counter-border-radius:                       5px !default;
+$counter-border-radius-2 :                    12px !default;
+
+
+/* counter-style */
+@import "counter-1.scss";
+@import "counter-4.scss";
+@import "counter-6.scss";

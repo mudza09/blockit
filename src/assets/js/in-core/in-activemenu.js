@@ -1,8 +1,8 @@
 /* in-activemenu.js | https://www.indonez.com | Indonez | MIT License */
 (function () {
-    const path = location.pathname.slice(location.pathname.lastIndexOf('/') + 1);
-    const navbar = document.querySelectorAll('.uk-navbar-nav li');
-    const dropdown = document.querySelectorAll('.uk-navbar-dropdown li');
+    const   path = location.pathname.slice(location.pathname.lastIndexOf('/') + 1),
+            navbar = document.querySelectorAll('.uk-navbar-nav li'),
+            dropdown = document.querySelectorAll('.uk-navbar-dropdown li');
 
     if (location.pathname[location.pathname.length - 1] === '/') {
         navbar[0].classList.add('uk-active');
@@ -16,10 +16,14 @@
 
     dropdown.forEach(function (el) {
         if (dropdown.length > 0 && el.querySelectorAll('a')[0].getAttribute('href') === path) {
-            const standard = el.parentElement.parentElement;
-            const multiple = el.parentElement.parentElement.parentElement.parentElement;
-            standard.parentElement.classList.add('uk-active');
-            multiple.parentElement.classList.add('uk-active');
+            const   standard = el.parentElement.parentElement,
+                    multiple = el.parentElement.parentElement.parentElement.parentElement;
+                    
+            if (standard.parentElement.tagName === 'LI') {
+                standard.parentElement.classList.add('uk-active');
+            } else {
+                multiple.parentElement.classList.add('uk-active');
+            }
         }
     });
 })();

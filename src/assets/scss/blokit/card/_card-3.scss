@@ -1,0 +1,10 @@
+.in-card-3 {
+    .uk-card-default {
+        border: $card-border-width solid $card-border-color;
+        background-color: $card-color;
+    }
+    img {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}

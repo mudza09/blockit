@@ -1,11 +1,8 @@
 <!-- main navigation begin -->
-<nav class="uk-navbar-container">
+<nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
     <div class="uk-container uk-container-expand" data-uk-navbar>
         <div class="uk-navbar-left">
-            <a class="uk-navbar-item uk-logo" href="#">
-                <i class="fas fa-clone fa-sm uk-margin-remove-bottom uk-text-primary uk-margin-small-right"></i>
-                blokit
-            </a>
+            {{> module-logo }}
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
