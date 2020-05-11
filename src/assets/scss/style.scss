@@ -16,32 +16,35 @@
     1.7. footer
 ------------------------------------------------------------------ */
 
-/* [ BLOKIT BASE ] */
+/* [ blokit base ] */
 @import "blokit/base/blokit-base.scss";
 
-/* [ BLOKIT NAVIGATION ] */
+/* [ blokit navigation ] */
 @import "blokit/navigation/blokit-navigation.scss";
 
-/* [ BLOKIT PRICING ] */
+/* [ blokit pricing ] */
 @import "blokit/pricing/blokit-pricing.scss";
 
-/* [ BLOKIT TESTIMONI ] */
+/* [ blokit hero ] */
+@import "blokit/hero/blokit-hero.scss";
+
+/* [ blokit testimoni ] */
 @import "blokit/testimoni/blokit-testimoni.scss";
 
-/* [ BLOKIT CLIENT LOGO ] */
+/* [ blokit client logo ] */
 @import "blokit/client-logo/blokit-client-logo.scss";
 
-/* [ BLOKIT CARD ] */
+/* [ blokit card ] */
 @import "blokit/card/blokit-card.scss";
 
-/* [ BLOKIT BLOG ] */
+/* [ blokit blog ] */
 @import "blokit/blog/blokit-blog.scss";
 
-/* [ BLOKIT FAQ ] */
+/* [ blokit faq ] */
 @import "blokit/faq/blokit-faq.scss";
 
-/* [ BLOKIT COUNTER ] */
+/* [ blokit counter ] */
 @import "blokit/counter/blokit-counter.scss";
 
-/* [ BLOKIT UTILITY ] */
+/* [ blokit utility ] */
 @import "blokit/utility/blokit-utility.scss";

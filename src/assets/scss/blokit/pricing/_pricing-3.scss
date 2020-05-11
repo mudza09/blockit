@@ -54,14 +54,6 @@
             .uk-list-divider > li:nth-child(n+2) {
                 border-color: lighten($pricing-border-color-featured, 15%);
             }
-            .uk-button-default {
-                border-color: lighten($pricing-border-color-featured, 15%);
-                color: $pricing-border-color-featured;
-                &:hover {
-                    border-color: darken($pricing-border-color-featured, 5%);
-                    color: darken($pricing-border-color-featured, 10%);
-                }
-            }
         }
     }
 }

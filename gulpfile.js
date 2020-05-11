@@ -29,7 +29,8 @@ function compileHtml() {
             root: 'src/pages/',
             layouts: 'src/layouts/',
             partials: 'src/partials/',
-            data: 'src/data/'
+            helpers: 'src/helpers/',
+            data: 'src/data/'            
         }))
         .pipe(extReplace('.html'))
         .pipe(beautify({

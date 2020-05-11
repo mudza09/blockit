@@ -1,0 +1,9 @@
+.in-hero-1 {
+    .uk-button-text {
+        border-bottom: $button-text-border-width dashed $button-text-border;
+    }
+    .uk-button-text:hover,
+    .uk-button-text:focus {
+        border-bottom: $button-text-border-width dashed $button-default-hover-color;
+    }
+}

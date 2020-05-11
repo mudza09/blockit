@@ -1,14 +1,12 @@
-// main.scss
-
-// 1. blokIt custom variables.
+// 1. blokit custom variables.
 @import "style.scss";
 
-// 2. Import default variables and available mixins.
+// 2. import default variables and available mixins.
 @import "../../../node_modules/uikit/src/scss/variables.scss";
 @import "../../../node_modules/uikit/src/scss/mixins.scss";
 
-// 3. blokIt custom mixins overwrites.
+// 3. blokit custom mixins overwrites.
 @import "style.scss";
 
-// 4. Import UIkit
+// 4. import uikit
 @import "../../../node_modules/uikit/src/scss/uikit.scss";

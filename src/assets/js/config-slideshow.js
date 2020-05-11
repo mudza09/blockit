@@ -7,20 +7,20 @@
  * Indonez Copyright 2020 All Rights Reserved.
  * -------------------------------------------------------------------------- 
  * javascript handle initialization
-    1. Homepage uikit slideshow 
+    1. uikit slideshow 
  * -------------------------------------------------------------------------- */
 
 'use strict';
 
 let slideshowApp = {
-    //----------- 1. Homepage uikit slideshow -----------
+    //----------- 1. uikit slideshow -----------
     theme_slideshow: function () {
         let slideshow = UIkit.slideshow('.in-slideshow', {
             autoplay: true,
             autoplayInterval: 7000,
-            animation: 'scale',
-            minHeight: 300,
-            maxHeight: 438
+            animation: 'slide',
+            minHeight: 280,
+            maxHeight: 480
         });
     },
     theme_init: function () {

@@ -13,6 +13,9 @@ $button-secondary-background:                    #999 !default;
 $button-border-width:                            1px !default;
 $button-default-border:                          #ccc !default;
 
+$button-text-border-width:                       $button-border-width !default;
+$button-text-border:                             lighten($button-default-color, 15%) !default;
+
 
 // uikit button mixins
 // ========================================================================
@@ -22,3 +25,9 @@ $button-default-border:                          #ccc !default;
 @mixin hook-button-default-hover(){ 
     border-color: darken($button-default-border, 5%); 
 }
+// @mixin hook-button-text(){
+//     border-bottom: $button-text-border-width dashed $button-text-border;
+// }
+// @mixin hook-button-text-hover(){
+//     border-bottom: $button-text-border-width dashed $button-default-hover-color;
+// }

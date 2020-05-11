@@ -1,5 +1,5 @@
 - colors
-- typography
+- typography (x)
 - spacing
-- button
-- form
+- button (x)
+- form (x)

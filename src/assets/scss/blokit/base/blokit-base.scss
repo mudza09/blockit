@@ -18,7 +18,7 @@ $base-h4-line-height:                            1.2 !default;
 $base-h5-line-height:                            1.2 !default;
 $base-h6-line-height:                            1.2 !default;
 
-$base-small-font-size:                           60% !default;
+$base-small-font-size:                           0.824rem !default;
 
 $base-blockquote-font-size:                      1.059rem !default;
 $base-blockquote-line-height:                    1.5 !default;
@@ -37,7 +37,7 @@ $base-hr-margin-vertical:                        20px !default;
 $base-hr-border-width:                           1px !default;
 $base-hr-border:                                 #e5e5e5 !default;
 
-$text-small-font-size:                           0.735rem !default;
+$text-small-font-size:                           $base-small-font-size !default;
 
 
 // blokit base variable

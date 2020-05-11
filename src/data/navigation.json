@@ -9,6 +9,10 @@
             "link": "feature.html"
         },
         {
+            "title": "Hero",
+            "link": "hero.html"
+        },
+        {
             "title": "Team",
             "link": "team.html"
             
@@ -42,67 +46,8 @@
             "link": "counter.html"
         },
         {
-            "title": "Dropdown 1",
-            "link": "#",
-            "dropdown": [
-                {
-                    "standard": [ 
-                        {
-                            "title": "Sample link 1",
-                            "link": "blog.html"
-                        },
-                        {
-                            "title": "Sample link 2",
-                            "link": "#"
-                        },
-                        {
-                            "title": "Sample link 3",
-                            "link": "#"
-                        },
-                        {
-                            "title": "Sample link 4",
-                            "link": "#"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Dropdown 2",
-            "link": "#",
-            "dropdown": [
-                {
-                    "multiple": [
-                        {
-                            "title": "Sample link 5",
-                            "link": "team.html",
-                            "icon": {
-                                "name": "fa-external-link-square-alt"
-                            }
-                        },
-                        {
-                            "title": "Sample link 6",
-                            "link": "#"
-                        },
-                        {
-                            "title": "Sample link 7",
-                            "link": "#"
-                        },
-                        {
-                            "title": "Sample link 8",
-                            "link": "#",
-                            "icon": {
-                                "name": "fa-gavel"
-                            }
-                        }
-                    ],
-                    "multiple-text": [
-                        {
-                            "text": "Adipiscing elit sed do eiusmod incididunt ut labore dolore magna lorem ipsum sit dolor amet consectetur"
-                        }
-                    ]
-                }
-            ]
+            "title": "Faq",
+            "link": "faq.html"
         }
     ]
 }

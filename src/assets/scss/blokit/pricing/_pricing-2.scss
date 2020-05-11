@@ -3,11 +3,11 @@
         transition: all ease 600ms;        
     } 
     .uk-card-default {
-        background-color: rgba(0, 0, 0, .02);
+        background-color: #fff;
         border-bottom-left-radius: $pricing-border-radius-2;
         border-bottom-right-radius: $pricing-border-radius-2;
         &:hover {
-            background-color: #fff;
+            background-color: rgba(0, 0, 0, .02);
         }
     }
     .uk-card-header {
