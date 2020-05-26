@@ -13,6 +13,7 @@
     4. Counter config 4
     5. Counter config 5
     6. Counter config 6
+    7. Counter config 7
  * -------------------------------------------------------------------------- */
 
 'use strict';
@@ -20,14 +21,14 @@
 let counterApp = {
     //---------- 1. Counter config 1 -----------
     theme_counter_1: function () {
-        var counter = new counterUp({
+        let counter = new counterUp({
             selector: '.count-1',
             start: 0,
             duration: 3200,
             intvalues: true,
             interval: 50
         });
-        var observer = new IntersectionObserver(function(entries) {
+        let observer = new IntersectionObserver(function(entries) {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
@@ -35,14 +36,14 @@ let counterApp = {
     },
     //---------- 2. Counter config 2 -----------
     theme_counter_2: function () {
-        var counter = new counterUp({
+        let counter = new counterUp({
             selector: '.count-2',
             start: 0,
             duration: 3200,
             intvalues: true,
             interval: 50
         });
-        var observer = new IntersectionObserver(function(entries) {
+        let observer = new IntersectionObserver(function(entries) {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
@@ -50,14 +51,14 @@ let counterApp = {
     },
     //---------- 3. Counter config 3 -----------
     theme_counter_3: function () {
-        var counter = new counterUp({
+        let counter = new counterUp({
             selector: '.count-3',
             start: 0,
             duration: 3200,
             intvalues: true,
             interval: 50
         });
-        var observer = new IntersectionObserver(function(entries) {
+        let observer = new IntersectionObserver(function(entries) {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
@@ -65,14 +66,14 @@ let counterApp = {
     },
     //---------- 4. Counter config 4 -----------
     theme_counter_4: function () {
-        var counter = new counterUp({
+        let counter = new counterUp({
             selector: '.count-4',
             start: 0,
             duration: 3200,
             intvalues: true,
             interval: 50
         });
-        var observer = new IntersectionObserver(function(entries) {
+        let observer = new IntersectionObserver(function(entries) {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
@@ -80,14 +81,14 @@ let counterApp = {
     },
     //---------- 5. Counter config 5 -----------
     theme_counter_5: function () {
-        var counter = new counterUp({
+        let counter = new counterUp({
             selector: '.count-5',
             start: 0,
             duration: 3200,
             intvalues: true,
             interval: 50
         });
-        var observer = new IntersectionObserver(function(entries) {
+        let observer = new IntersectionObserver(function(entries) {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
@@ -95,18 +96,33 @@ let counterApp = {
     },
     //---------- 6. Counter config 6 -----------
     theme_counter_6: function () {
-        var counter = new counterUp({
+        let counter = new counterUp({
             selector: '.count-6',
             start: 0,
             duration: 3200,
             intvalues: true,
             interval: 50
         });
-        var observer = new IntersectionObserver(function(entries) {
+        let observer = new IntersectionObserver(function(entries) {
             if(entries[0].isIntersecting === true)
                 counter.start();
         }, { threshold: [0] });
         observer.observe(document.querySelector('.count-6'));   
+    },
+    //---------- 7. Counter config 7 -----------
+    theme_counter_7: function () {
+        let counter = new counterUp({
+            selector: '.count-7',
+            start: 0,
+            duration: 3200,
+            intvalues: true,
+            interval: 50
+        });
+        let observer = new IntersectionObserver(function(entries) {
+            if(entries[0].isIntersecting === true)
+                counter.start();
+        }, { threshold: [0] });
+        observer.observe(document.querySelector('.count-7'));  
     },
     // theme init
     theme_init: function () {
@@ -116,6 +132,7 @@ let counterApp = {
         counterApp.theme_counter_4();
         counterApp.theme_counter_5();
         counterApp.theme_counter_6();
+        counterApp.theme_counter_7();
     }
 }
 
