@@ -1,4 +1,4 @@
-.in-faq-3 {
+.in-faq-4 {
     margin-top: -20px;
     .uk-card-default {
         margin-top: 20px;
@@ -10,7 +10,7 @@
     }
     .uk-accordion-title {
         &::after {
-            content: "\f0da";
+            content: "\f067";
             font-family: 'Font Awesome 5 Free';
             font-style: normal;
             font-weight: 900;
@@ -21,7 +21,7 @@
         }        
     }
     .uk-open .uk-accordion-title::after {        
-        content: "\f0d7";
+        content: "\f068";
     }
     .uk-open .uk-accordion-title {        
         color: $faq-primary-color;
