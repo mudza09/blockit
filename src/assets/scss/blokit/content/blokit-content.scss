@@ -1,0 +1,14 @@
+// blokit content variables
+$content-color:                                     #fff !default;
+$content-primary-color:                             #1e87f0 !default;
+$content-border-width:                              1px !default;
+$content-border-width-2:                            2px !default;
+$content-border-color:                              rgba(0, 0, 0, .09) !default;
+$content-border-accent:                             #2788ed !default;
+$content-border-radius:                             5px !default;
+$content-border-radius-2 :                          12px !default;
+
+
+/* content-style */
+@import "content-10.scss";
+@import "content-11.scss";

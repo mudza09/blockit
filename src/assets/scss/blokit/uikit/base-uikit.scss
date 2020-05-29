@@ -1,0 +1,71 @@
+// uikit base variable
+// ========================================================================
+$base-body-background:                           #fff !default;
+$base-body-font-family:                          'Nunito', sans-serif !default;
+$base-body-font-size:                            17px !default;
+$base-body-line-height:                          1.588 !default;
+$base-body-color:                                #666 !default;
+
+$base-link-color:                                #1e87f0 !default;
+$base-link-text-decoration:                      none !default;
+$base-link-hover-color:                          #0f6ecd !default;
+$base-link-hover-text-decoration:                underline !default;
+
+$base-h1-line-height:                            1.1 !default;
+$base-h2-line-height:                            1.2 !default;
+$base-h3-line-height:                            1.2 !default;
+$base-h4-line-height:                            1.2 !default;
+$base-h5-line-height:                            1.2 !default;
+$base-h6-line-height:                            1.2 !default;
+
+$base-small-font-size:                           0.824rem !default;
+
+$base-blockquote-font-size:                      1.059rem !default;
+$base-blockquote-line-height:                    1.5 !default;
+$base-blockquote-font-style:                     italic !default;
+$base-blockquote-footer-font-size:               0.765rem !default;
+$base-blockquote-footer-line-height:             1.4 !default;
+
+$base-heading-font-family:                       'Nunito', sans-serif !default;
+$base-heading-font-weight:                       700 !default;
+$base-heading-color:                             #333 !default;
+$base-heading-text-transform:                    none !default;
+
+$base-list-padding-left:                         30px !default;
+
+$base-hr-margin-vertical:                        20px !default;
+$base-hr-border-width:                           1px !default;
+$base-hr-border:                                 #e5e5e5 !default;
+
+$text-small-font-size:                           $base-small-font-size !default;
+
+
+// uikit blockquote mixins
+// ========================================================================
+@mixin hook-base-blockquote(){
+    font-family: Georgia, serif;
+    color: #8f8f8f;
+    p:first-of-type::before {
+        content: "“";
+        font-family: $base-body-font-family;
+        font-size: 164px;
+        font-style: normal;
+        color: rgba(0, 0, 0, 0.06);
+        position: absolute;
+        margin: -80px 0 0 -20px;
+    }
+}
+@mixin hook-base-blockquote-footer(){ 
+    font-family: $base-body-font-family;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    color: #333;
+    cite {
+        font-size: 0.735rem;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #999;
+    }
+}
