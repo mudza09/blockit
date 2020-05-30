@@ -1,18 +1,14 @@
 // blokit pricing variables
-$pricing-border-width:                     2px !default;
-$pricing-border-width-2:                   1px !default;
-$pricing-border-radius:                    12px !default;
-$pricing-border-radius-2:                  8px !default;
-$pricing-border-color:                     rgba(0, 0, 0, .09) !default;
-$pricing-border-color-hover:               rgba(0, 0, 0, .16) !default;
-$pricing-border-color-featured:            #2788ed !default;
-$pricing-background:                       #fff !default;
-$pricing-background-hover:                 rgba(10, 5, 5, 0.01) !default;
-$pricing-featured-background-hover:        lighten(#468efc, 35%) !default;
-$pricing-title-color:                      #999 !default;
-$pricing-price-color:                      #333 !default;
-$pricing-label-radius:                     4px !default;
-$pricing-icon-color:                       rgba(0, 0, 0, .1) !default;
+$pricing-default-color:                       $base-default-color !default;
+$pricing-muted-color:                         $base-muted-color !default;
+$pricing-primary-color:                       $base-primary-color !default;
+$pricing-secondary-color:                     $base-secondary-color !default;
+$pricing-border-color:                        $base-border-color !default;
+$pricing-border-color-2:                      $base-border-color-2 !default;
+$pricing-border-width:                        $base-border-width !default;
+$pricing-border-width-2:                      $base-border-width-2 !default;
+$pricing-border-radius:                       $base-border-radius !default;
+$pricing-border-radius-2:                     $base-border-radius-2 !default;
 
 
 /* pricing-style */

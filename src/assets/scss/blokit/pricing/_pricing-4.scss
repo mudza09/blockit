@@ -2,24 +2,18 @@
     .uk-card {
         overflow: hidden;
         border-radius: $pricing-border-radius-2;
-        border: $pricing-border-width-2 solid $pricing-border-color;
+        border: $pricing-border-width solid $pricing-border-color;
         transition: all ease 600ms;        
     }
     .uk-card-default {
-        background-color: $pricing-background;
+        background-color: $pricing-default-color;
         &:hover {
-            background-color: $pricing-background-hover;
-            border-color: $pricing-border-color-hover;
+            border-color: darken($pricing-border-color, 9%);
         }
     }
     .uk-card-header {
-        h4 {
-            margin-bottom: -5px;
-            color: $pricing-price-color;
-        }
         h6 {
             letter-spacing: 2px;
-            color: $pricing-title-color;
         }
         .in-pricing-small {
             font-size: 24px;
@@ -29,34 +23,31 @@
         }
     }
     .uk-card-body {
-        padding-top: 20px;
+        padding-top: 15px;
         .uk-list-bullet > li::before {
             background-image: none;
             font-size: 14px;
             font-family: 'Font Awesome 5 Free'; 
             font-weight: 900; 
             content: "\f00c";
-            color: $pricing-border-color-featured;
+            color: $pricing-primary-color;
             top: 1px;
             left: 4px;
         }  
     }
     &.in-pricing-featured {
         .uk-card {
-            border-color: $pricing-border-color-featured;
+            border-color: $pricing-primary-color;
             &:hover {
-                background-color: $pricing-featured-background-hover;
-                border-color: $pricing-border-color-featured;
+                background-color: lighten($pricing-primary-color, 45%);
+                border-color: $pricing-primary-color;
             }
         }
         .uk-card-header {
-            border-color: $pricing-border-color-featured;
+            border-color: $pricing-primary-color;
             .in-icon-wrap {
-                background-color: $pricing-border-color-featured;
+                background-color: $pricing-primary-color;
                 color: #fff;
-            }
-            h6 {
-                color: $pricing-border-color-featured;
             }
         }
     }

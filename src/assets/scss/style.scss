@@ -1,3 +1,5 @@
+// base variables
+@import "blokit/_base-variables/base-variables.scss";
 /* ------------------------------------------------------------------
  * File         : style.css
  * Version      : 1.0.0
@@ -16,8 +18,8 @@
     1.7. footer
 ------------------------------------------------------------------ */
 
-/* [ blokit base ] */
-@import "blokit/base/blokit-base.scss";
+/* [ custom font ] */
+@import "blokit/_custom/custom-font.scss";
 
 /* [ blokit navigation ] */
 @import "blokit/navigation/blokit-navigation.scss";
@@ -29,7 +31,7 @@
 @import "blokit/hero/blokit-hero.scss";
 
 /* [ blokit testimoni ] */
-@import "blokit/testimoni/blokit-testimoni.scss";
+@import "blokit/testimonial/blokit-testimonial.scss";
 
 /* [ blokit client logo ] */
 @import "blokit/client-logo/blokit-client-logo.scss";

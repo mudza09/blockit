@@ -1,20 +1,19 @@
 .in-pricing-5 {    
     .uk-card {
         overflow: hidden;
-        border-radius: $pricing-border-radius;
+        border-radius: $pricing-border-radius-2;
         border: $pricing-border-width-2 solid $pricing-border-color;
         transition: all ease 600ms;        
     }
     .uk-card-default {
-        background-color: $pricing-background;
+        background-color: $pricing-default-color;
         &:hover {
-            background-color: $pricing-background-hover;
-            border-color: $pricing-border-color-hover;
+            border-color: darken($pricing-border-color, 9%);
         }
     }
     .uk-card-header {
         h6 {
-            color: #fff;
+            color: $pricing-default-color;
         }
         .in-pricing-small {
             font-size: 24px;
@@ -24,7 +23,6 @@
         }
         .in-pricing-month {
             font-size: 24px;
-            color: $pricing-title-color;
             margin-left: -10px;
         }
         hr {
@@ -38,22 +36,22 @@
         }
         .uk-label {
             padding: 14px 25px 9px 25px;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            background-color: $pricing-title-color;
+            border-bottom-left-radius: $base-border-radius;
+            border-bottom-right-radius: $base-border-radius;
+            background-color: $pricing-secondary-color;
         }
     }
     &.in-pricing-featured {
         .uk-card {
-            border-color: $pricing-border-color-featured;
+            border-color: $pricing-primary-color;
             &:hover {
-                background-color: $pricing-featured-background-hover;
-                border-color: $pricing-border-color-featured;
+                background-color: lighten($pricing-primary-color, 45%);
+                border-color: $pricing-primary-color;
             }
         }
         .uk-card-header {
             .uk-label {
-                background-color: $pricing-border-color-featured;
+                background-color: $pricing-primary-color;
             }
         }
     }

@@ -1,10 +1,14 @@
 // blokit card variables
-$card-color:                               #fff !default;
-$card-primary-color:                       #1e87f0 !default;
-$card-secondary-color:                     #222 !default;
-$card-border-width:                        1px !default;
-$card-border-color:                        rgba(0, 0, 0, .09) !default;
-$card-border-accent:                       #2788ed !default;
+$card-default-color:                          $base-default-color !default;
+$card-muted-color:                            $base-muted-color !default;
+$card-primary-color:                          $base-primary-color !default;
+$card-secondary-color:                        $base-secondary-color !default;
+$card-border-color:                           $base-border-color !default;
+$card-border-color-2:                         $base-border-color-2 !default;
+$card-border-width:                           $base-border-width !default;
+$card-border-width-2:                         $base-border-width-2 !default;
+$card-border-radius:                          $base-border-radius !default;
+$card-border-radius-2:                        $base-border-radius-2 !default;
 
 
 /* card-style */

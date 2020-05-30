@@ -1,8 +1,8 @@
 .in-content-11 {
     .uk-card-default {
         transition: all ease .5s;
-        border: $card-border-width solid $card-border-color;
-        background-color: $card-color;
+        border: $content-border-width solid $content-border-color;
+        background-color: $content-default-color;
         h4 {
             color: #4f4f4f;
         }

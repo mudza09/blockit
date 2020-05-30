@@ -3,25 +3,20 @@
         transition: all ease 600ms;        
     } 
     .uk-card-default {
-        background-color: #fff;
+        background-color: $pricing-default-color;
         border-bottom-left-radius: $pricing-border-radius-2;
         border-bottom-right-radius: $pricing-border-radius-2;
-        &:hover {
-            background-color: rgba(0, 0, 0, .02);
-        }
     }
     .uk-card-header {
         border-top-left-radius: $pricing-border-radius-2;
         border-top-right-radius: $pricing-border-radius-2;
         border-top: 0;
-        background-color: $pricing-title-color;
+        background-color: $pricing-secondary-color;
         h3 {
-            margin: 12px 0 -20px;
-            color: #fff;
+            color: $pricing-default-color;
         }
         h4 {
-            margin-bottom: 2px;
-            color: #fff;
+            color: $pricing-default-color;
         }
         .in-pricing-small {
             font-size: 24px;
@@ -32,28 +27,20 @@
     }
     .uk-card-body {
         padding-top: 25px;
-        box-shadow: inset 0px 0px 0px $pricing-border-width-2 $pricing-border-color;
+        box-shadow: inset 0px 0px 0px $pricing-border-width $pricing-border-color;
         border-bottom-left-radius: $pricing-border-radius-2;
         border-bottom-right-radius: $pricing-border-radius-2;
         transition: all ease 600ms;
-        h5, i {
-            color: $pricing-title-color;
-        }        
     }
     &.in-pricing-featured {
         .uk-card {
             &:hover {
-                background-color: $pricing-featured-background-hover;
-                border-color: $pricing-border-color-featured;
+                background-color: lighten($pricing-primary-color, 45%);
+                border-color: $pricing-primary-color;
             }
         }
         .uk-card-header {
-            background-color: $pricing-border-color-featured;
-        }
-        .uk-card-body {
-            h5, i {
-                color: $pricing-border-color-featured;
-            }            
+            background-color: $pricing-primary-color;
         }
     }
 }
