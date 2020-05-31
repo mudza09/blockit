@@ -1,19 +1,19 @@
-// 1. blokit custom variables.
-@import "blokit/uikit/variables/accordion-uikit.scss";
-@import "blokit/uikit/variables/base-uikit.scss";
-@import "blokit/uikit/variables/button-uikit.scss";
-@import "blokit/uikit/variables/form-uikit.scss";
-@import "blokit/uikit/variables/navbar-uikit.scss";
+// 1. custom variables
+@import "blockit/uikit/variables/accordion-uikit.scss";
+@import "blockit/uikit/variables/base-uikit.scss";
+@import "blockit/uikit/variables/button-uikit.scss";
+@import "blockit/uikit/variables/form-uikit.scss";
+@import "blockit/uikit/variables/navbar-uikit.scss";
 
-// 2. import default variables and available mixins.
+// 2. import default variables and available mixins
 @import "../../../node_modules/uikit/src/scss/variables.scss";
 @import "../../../node_modules/uikit/src/scss/mixins.scss";
 
-// 3. blokit custom mixins overwrites.
-@import "blokit/uikit/mixins/base-uikit.scss";
-@import "blokit/uikit/mixins/button-uikit.scss";
-@import "blokit/uikit/mixins/form-uikit.scss";
-@import "blokit/uikit/mixins/navbar-uikit.scss";
+// 3. custom mixins overwrites
+@import "blockit/uikit/mixins/base-uikit.scss";
+@import "blockit/uikit/mixins/button-uikit.scss";
+@import "blockit/uikit/mixins/form-uikit.scss";
+@import "blockit/uikit/mixins/navbar-uikit.scss";
 
-// 4. import uikit
+// 4. import UIkit
 @import "../../../node_modules/uikit/src/scss/uikit.scss";

@@ -38,6 +38,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
-    "uikit": "^3.3.6"
+    "uikit": "^3.5.3"
   }
 }

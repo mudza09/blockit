@@ -1,5 +1,5 @@
 // base variables
-@import "blokit/_base-variables/base-variables.scss";
+@import "blockit/_base-variables/base-variables.scss";
 /* ------------------------------------------------------------------
  * File         : style.css
  * Version      : 1.0.0
@@ -9,53 +9,72 @@
  * Indonez Copyright 2020 All Rights Reserved.
  * ------------------------------------------------------------------
 [Table of contents]
-    1.1. base
-    1.2. header
-    1.3. sticky menu
-    1.4. mobile navidation
-    1.5. theme layout
-    1.6. blog
-    1.7. footer
+    1. custom font
+    2. header
+    3. navigation
+    4. hero
+    5. content    
+    6. card
+    7. client logo
+    8. team
+    9. pricing
+    10. counter
+    11. testimonial
+    12. blog
+    13. timeline
+    14. faq
+    15. footer
+    16. utility
+    17. custom style
 ------------------------------------------------------------------ */
 
-/* [ custom font ] */
-@import "blokit/_custom/custom-font.scss";
+/* [ 1. custom font ] */
+@import "blockit/_custom/custom-font.scss";
 
-/* [ blokit navigation ] */
-@import "blokit/navigation/blokit-navigation.scss";
+/* [ 2. header ] */
+@import "blockit/header/blockit-header.scss";
 
-/* [ blokit pricing ] */
-@import "blokit/pricing/blokit-pricing.scss";
+/* [ 3. navigation ] */
+@import "blockit/navigation/blockit-navigation.scss";
 
-/* [ blokit hero ] */
-@import "blokit/hero/blokit-hero.scss";
+/* [ 4. hero ] */
+@import "blockit/hero/blockit-hero.scss";
 
-/* [ blokit testimoni ] */
-@import "blokit/testimonial/blokit-testimonial.scss";
+/* [ 5. content ] */
+@import "blockit/content/blockit-content.scss";
 
-/* [ blokit client logo ] */
-@import "blokit/client-logo/blokit-client-logo.scss";
+/* [ 6. card ] */
+@import "blockit/card/blockit-card.scss";
 
-/* [ blokit card ] */
-@import "blokit/card/blokit-card.scss";
+/* [ 7. client logo ] */
+@import "blockit/client-logo/blockit-client-logo.scss";
 
-/* [ blokit content ] */
-@import "blokit/content/blokit-content.scss";
+/* [ 8. team ] */
+@import "blockit/team/blockit-team.scss";
 
-/* [ blokit team ] */
-@import "blokit/team/blokit-team.scss";
+/* [ 9. pricing ] */
+@import "blockit/pricing/blockit-pricing.scss";
 
-/* [ blokit blog ] */
-@import "blokit/blog/blokit-blog.scss";
+/* [ 10. counter ] */
+@import "blockit/counter/blockit-counter.scss";
 
-/* [ blokit faq ] */
-@import "blokit/faq/blokit-faq.scss";
+/* [ 11. testimonial ] */
+@import "blockit/testimonial/blockit-testimonial.scss";
 
-/* [ blokit counter ] */
-@import "blokit/counter/blokit-counter.scss";
+/* [ 12. blog ] */
+@import "blockit/blog/blockit-blog.scss";
 
-/* [ blokit timeline ] */
-@import "blokit/timeline/blokit-timeline.scss";
+/* [ 13. timeline ] */
+@import "blockit/timeline/blockit-timeline.scss";
 
-/* [ blokit utility ] */
-@import "blokit/utility/blokit-utility.scss";
+/* [ 14. faq ] */
+@import "blockit/faq/blockit-faq.scss";
+
+/* [ 15. footer ] */
+@import "blockit/footer/blockit-footer.scss";
+
+/* [ 16. utility ] */
+@import "blockit/utility/blockit-utility.scss";
+
+/* [ 17. custom style ] */
+@import "blockit/_custom/custom-style.scss";

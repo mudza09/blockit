@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zxx" dir="ltr">
 <head>    
     <!-- Standard Meta -->
     <meta charset="utf-8">
@@ -19,6 +19,9 @@
 <body>
     {{> component-header }}
     {{> body}}
-    {{> module-scripts }}
+    {{#unlesspage 'index'}}
+    {{> component-footer }}
+    {{/unlesspage}}
+    {{> module-scripts }}    
 </body>
 </html>
