@@ -21,7 +21,7 @@ function clean() {
     return del('dist')
 };
 
-// Handlebar compile task
+// Handlebars compile task
 function compileHtml() {
     return src('src/pages/**/*.hbs')
     .pipe(newer('dist'))
@@ -91,6 +91,7 @@ function compileJs() {
         // js vendor
         src('src/assets/js/vendor/*.js')
         .pipe(newer('dist/js/vendor'))
+        .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
         .pipe(dest('dist/js/vendor'))
     )
 };

@@ -2,7 +2,7 @@
 $utility-default-color:                       $base-default-color !default;
 $utility-muted-color:                         $base-muted-color !default;
 $utility-primary-color:                       $base-primary-color !default;
-$utility-secondary-color:                     $base-secondary-color !default;
+$utility-secondary-color:                     #5c5c5c !default;
 $utility-border-color:                        $base-border-color !default;
 $utility-border-color-2:                      $base-border-color-2 !default;
 $utility-border-width:                        $base-border-width !default;
@@ -36,4 +36,4 @@ $utility-border-radius-2:                     $base-border-radius-2 !default;
 @import "zindex.scss";
 
 // remove this
-@import "blockit-syntax.scss";
+@import "syntaxcode.scss";

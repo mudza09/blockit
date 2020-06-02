@@ -5,9 +5,9 @@
             {{> module-logo }}
         </div>
         <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav">
+            <ul class="uk-navbar-nav uk-visible@m">
                 {{#each navigation.nav}}
-                <li><a href="{{root}}{{link}}">{{title}}</a>{{#unless dropdown}}</li>{{/unless}}
+                <li><a href="{{root}}{{link}}">{{title}}{{#if dropdown}}<i class="fas fa-chevron-down"></i>{{/if}}</a>{{#unless dropdown}}</li>{{/unless}}
                     {{#if dropdown.[0].standard}}
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -23,7 +23,7 @@
                             <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     {{#each dropdown.[0].multiple}}
-                                    <li><a href="{{root}}{{link}}">{{title}}{{#with icon}}<i class="fas {{name}} fa-sm uk-margin-small-left"></i>{{/with}}</a></li>
+                                    <li><a href="{{root}}{{link}}">{{title}}{{#with icon}}<i class="fas {{name}} fa-sm"></i>{{/with}}</a></li>
                                     {{/each}}
                                 </ul>
                             </div>
@@ -41,6 +41,7 @@
                 {{#if dropdown}}</li>{{/if}}
                 {{/each}}
             </ul>
+            {{> module-navigation-mobile }}
         </div>
     </div>
 </nav>

@@ -5,92 +5,67 @@
             "link": "index.html"
         },
         {
-            "title": "Feature",
-            "link": "feature.html"
+            "title": "Services",
+            "link": "services.html"
         },
         {
-            "title": "Team",
-            "link": "team.html"
-            
-        },
-        {
-            "title": "Pricing",
-            "link": "pricing.html"
-        },
-        {
-            "title": "Testimonial",
-            "link": "testimonial.html"
-        },
-        {
-            "title": "Contact",
-            "link": "contact.html"
-        },
-        {
-            "title": "Client logo",
-            "link": "client-logo.html"
-        },
-        {
-            "title": "Card",
-            "link": "card.html"
-        },
-        {
-            "title": "Blog",
-            "link": "blog.html"
-        },
-        {
-            "title": "Counter",
-            "link": "counter.html"
-        },
-        {
-            "title": "Dropdown 1",
+            "title": "Company",
             "link": "#",
             "dropdown": [
                 {
                     "standard": [ 
                         {
-                            "title": "Sample link 1",
+                            "title": "About",
+                            "link": "about.html"
+                        },
+                        {
+                            "title": "Blog",
                             "link": "blog.html"
                         },
                         {
-                            "title": "Sample link 2",
-                            "link": "#"
+                            "title": "Careers",
+                            "link": "careers.html"
                         },
                         {
-                            "title": "Sample link 3",
-                            "link": "#"
-                        },
-                        {
-                            "title": "Sample link 4",
-                            "link": "#"
+                            "title": "Contact",
+                            "link": "contact.html"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Dropdown 2",
+            "title": "Pricing",
+            "link": "pricing.html"
+        },
+        {
+            "title": "Resources",
             "link": "#",
             "dropdown": [
                 {
                     "multiple": [
                         {
-                            "title": "Sample link 5",
-                            "link": "team.html",
+                            "title": "Documentation",
+                            "link": "https://getuikit.com/docs/",
                             "icon": {
                                 "name": "fa-external-link-square-alt"
                             }
                         },
                         {
-                            "title": "Sample link 6",
-                            "link": "#"
+                            "title": "Help Center",
+                            "link": "help-center.html"
                         },
                         {
-                            "title": "Sample link 7",
-                            "link": "#"
+                            "title": "Customers",
+                            "link": "customers.html"
                         },
                         {
-                            "title": "Sample link 8",
-                            "link": "#",
+                            "title": "Roadmap",
+                            "link": "roadmap.html"
+                        },
+                        {
+                            "title": "Legal Docs",
+                            "link": "legal-docs.html",
                             "icon": {
                                 "name": "fa-gavel"
                             }
