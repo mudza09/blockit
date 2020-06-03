@@ -21,11 +21,12 @@
     10. counter
     11. testimonial
     12. blog
-    13. timeline
-    14. faq
-    15. footer
-    16. utility
-    17. custom style
+    13. contact
+    14. timeline
+    15. faq
+    16. footer
+    17. utility
+    18. custom style
 ------------------------------------------------------------------ */
 
 /* [ 1. custom font ] */
@@ -64,17 +65,20 @@
 /* [ 12. blog ] */
 @import "blockit/blog/blockit-blog.scss";
 
-/* [ 13. timeline ] */
+/* [ 13. blog ] */
+@import "blockit/contact/blockit-contact.scss";
+
+/* [ 14. timeline ] */
 @import "blockit/timeline/blockit-timeline.scss";
 
-/* [ 14. faq ] */
+/* [ 15. faq ] */
 @import "blockit/faq/blockit-faq.scss";
 
-/* [ 15. footer ] */
+/* [ 16. footer ] */
 @import "blockit/footer/blockit-footer.scss";
 
-/* [ 16. utility ] */
+/* [ 17. utility ] */
 @import "blockit/utility/blockit-utility.scss";
 
-/* [ 17. custom style ] */
+/* [ 18. custom style ] */
 @import "blockit/_custom/custom-style.scss";

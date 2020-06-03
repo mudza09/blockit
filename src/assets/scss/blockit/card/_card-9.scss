@@ -32,4 +32,26 @@
             margin: 25px 0 30px 0;
         }
     }
+    @media (max-width: 960px) {
+        .uk-card-default {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            .uk-tile {
+                &:nth-child(2) {
+                    border-left: 0;
+                }
+                &:nth-child(n+2) {
+                    border-bottom: $card-border-width solid $card-border-color;
+                }
+                &:last-child {
+                    border-left: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+        .uk-card-primary {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: $card-border-radius;
+        }
+    }
 }

@@ -7,4 +7,10 @@
         border-top-right-radius: $card-border-radius;
         border-bottom-right-radius: $card-border-radius;
     }
+    @media (max-width: 960px) {
+        img {
+            border-top-left-radius: $card-border-radius;
+            border-bottom-right-radius: 0;
+        }
+    }
 }
