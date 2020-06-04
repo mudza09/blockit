@@ -10,6 +10,11 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
     position: relative;
     top: -30px;
 }
+@media (max-width: 960px) {
+    .in-blockit-syntax {
+        top: -15px;
+    }
+}
 
 code[class*="language-"],
 pre[class*="language-"] {

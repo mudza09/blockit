@@ -1,11 +1,11 @@
 /* in-breadcrumb.js | https://www.indonez.com | Indonez | MIT License */
 (function () {
     const   navbar = document.querySelectorAll('.uk-navbar-nav li'),
-            homePath = navbar[0].getElementsByTagName('a')[0].pathname,
             breadWrap = document.getElementsByClassName('uk-breadcrumb');
     let breadChild;
 
     if (breadWrap.length > 0) {
+        const homePath = navbar[0].getElementsByTagName('a')[0].pathname;
         breadWrap[0].innerHTML = '<li><a href="' + homePath.slice(location.pathname.lastIndexOf('/') + 1) + '">' + navbar[0].innerText + '</a></li>';
 
         navbar.forEach(function (el) {
@@ -13,7 +13,7 @@
                 const   createLi = document.createElement('li'),
                         hrefLi = el.getElementsByTagName('a'),
                         breadPath = hrefLi[0].pathname;
-                breadChild = el.innerText;
+                breadChild = el.childNodes[0].innerText;
 
                 if (hrefLi[0].pathname === hrefLi[0].pathname) {
                     createLi.innerHTML = '<a href="' + hrefLi[0].href[hrefLi[0].href.length - 1] + '">' + breadChild + '</a>';

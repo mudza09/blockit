@@ -1,11 +1,13 @@
 <!-- main navigation begin -->
 <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
-    <div class="uk-container uk-container-expand" data-uk-navbar>
+    <div class="uk-container" data-uk-navbar>
         <div class="uk-navbar-left">
-            {{> module-logo }}
+            <div class="uk-navbar-item">
+                {{> module-logo }}
+            </div>
         </div>
-        <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav uk-visible@m">
+        <div class="uk-navbar-right uk-text-truncate">
+            <ul class="uk-navbar-nav uk-visible@m uk-margin-left">
                 {{#each navigation.nav}}
                 <li><a href="{{root}}{{link}}">{{title}}{{#if dropdown}}<i class="fas fa-chevron-down"></i>{{/if}}</a>{{#unless dropdown}}</li>{{/unless}}
                     {{#if dropdown.[0].standard}}

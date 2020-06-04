@@ -2,8 +2,10 @@
 @import "blockit/uikit/variables/accordion-uikit.scss";
 @import "blockit/uikit/variables/base-uikit.scss";
 @import "blockit/uikit/variables/button-uikit.scss";
+@import "blockit/uikit/variables/container-uikit.scss";
 @import "blockit/uikit/variables/form-uikit.scss";
 @import "blockit/uikit/variables/navbar-uikit.scss";
+@import "blockit/uikit/variables/utility-uikit.scss";
 
 // 2. import default variables and available mixins
 @import "../../../node_modules/uikit/src/scss/variables.scss";
@@ -14,6 +16,7 @@
 @import "blockit/uikit/mixins/button-uikit.scss";
 @import "blockit/uikit/mixins/form-uikit.scss";
 @import "blockit/uikit/mixins/navbar-uikit.scss";
+@import "blockit/uikit/mixins/utility-uikit.scss";
 
 // 4. import UIkit
 @import "../../../node_modules/uikit/src/scss/uikit.scss";

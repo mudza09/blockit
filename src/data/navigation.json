@@ -5,62 +5,72 @@
             "link": "index.html"
         },
         {
-            "title": "Feature",
-            "link": "feature.html"
-        },
-        {
-            "title": "Content",
-            "link": "content.html"
-        },
-        {
-            "title": "Hero",
-            "link": "hero.html"
-        },
-        {
-            "title": "Team",
-            "link": "team.html"
-            
-        },
-        {
-            "title": "Gallery",
-            "link": "gallery.html"
-            
-        },
-        {
-            "title": "Pricing",
-            "link": "pricing.html"
-        },
-        {
-            "title": "Timeline",
-            "link": "timeline.html"
-        },
-        {
-            "title": "Testimonial",
-            "link": "testimonial.html"
-        },
-        {
-            "title": "Contact",
-            "link": "contact.html"
-        },
-        {
-            "title": "Client logo",
-            "link": "client-logo.html"
-        },
-        {
-            "title": "Card",
-            "link": "card.html"
-        },
-        {
-            "title": "Blog",
-            "link": "blog.html"
-        },
-        {
-            "title": "Counter",
-            "link": "counter.html"
-        },
-        {
-            "title": "Faq",
-            "link": "faq.html"
+            "title": "Section lists",
+            "link": "#",
+            "dropdown": [
+                {
+                    "standard": [ 
+                        {
+                            "title": "Feature",
+                            "link": "feature.html"
+                        },
+                        {
+                            "title": "Content",
+                            "link": "content.html"
+                        },
+                        {
+                            "title": "Hero",
+                            "link": "hero.html"
+                        },
+                        {
+                            "title": "Team",
+                            "link": "team.html"
+                            
+                        },
+                        {
+                            "title": "Gallery",
+                            "link": "gallery.html"
+                            
+                        },
+                        {
+                            "title": "Pricing",
+                            "link": "pricing.html"
+                        },
+                        {
+                            "title": "Timeline",
+                            "link": "timeline.html"
+                        },
+                        {
+                            "title": "Testimonial",
+                            "link": "testimonial.html"
+                        },
+                        {
+                            "title": "Contact",
+                            "link": "contact.html"
+                        },
+                        {
+                            "title": "Client logo",
+                            "link": "client-logo.html"
+                        },
+                        {
+                            "title": "Card",
+                            "link": "card.html"
+                        },
+                        {
+                            "title": "Blog",
+                            "link": "blog.html"
+                        },
+                        {
+                            "title": "Counter",
+                            "link": "counter.html"
+                        },
+                        {
+                            "title": "Faq",
+                            "link": "faq.html"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -1,3 +1,5 @@
+@import "../../_base-variables/base-variables.scss";
+
 // uikit navigation variables
 // ========================================================================
 $navbar-background:                              #f8f8f8 !default;
@@ -7,7 +9,7 @@ $navbar-nav-item-height:                         80px !default;
 $navbar-nav-item-padding-horizontal:             15px !default;
 $navbar-nav-item-color:                          #999 !default;
 $navbar-nav-item-font-size:                      16px !default;
-$navbar-nav-item-font-family:                    'Nunito', sans-serif !default;
+$navbar-nav-item-font-family:                    $base-font-family !default;
 $navbar-nav-item-hover-color:                    #666 !default;
 $navbar-nav-item-onclick-color:                  #333 !default;
 $navbar-nav-item-active-color:                   #333 !default;
