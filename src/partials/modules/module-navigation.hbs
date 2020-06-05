@@ -1,4 +1,4 @@
-<!-- main navigation begin -->
+<!-- module navigation begin -->
 <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
     <div class="uk-container" data-uk-navbar>
         <div class="uk-navbar-left">
@@ -14,7 +14,7 @@
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             {{#each dropdown.[0].standard}}
-                            <li><a href="{{root}}{{link}}">{{title}}</a></li>
+                            <li><a href="{{root}}{{link}}">{{title}}{{#with icon}}<i class="fas {{name}} fa-sm"></i>{{/with}}</a></li>
                             {{/each}}
                         </ul>
                     </div>
@@ -44,7 +44,11 @@
                 {{/each}}
             </ul>
             {{> module-navigation-mobile }}
+            <div class="uk-visible@m uk-margin-medium-left">
+                <span class="uk-text-small uk-margin-right">Ver 1.0.1</span>
+                <a class="uk-button uk-button-default uk-button-small uk-border-pill" href="#"><i class="fab fa-github uk-margin-small-right"></i>Github</a>
+            </div>
         </div>
     </div>
 </nav>
-<!-- main navigation end -->
+<!-- module navigation end -->
