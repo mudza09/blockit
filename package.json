@@ -1,12 +1,12 @@
 {
   "name": "blockit",
-  "version": "2.0.0",
+  "version": "1.0.2",
   "description": "blockit, a premade sections layout by indonez built using uikit 3",
   "private": true,
   "scripts": {
+    "watch": "gulp watch",
     "build": "gulp build",
-    "minify": "gulp minify",
-    "watch": "gulp watch"
+    "minify": "gulp minify"    
   },
   "keywords": [
     "handlebars",
@@ -17,7 +17,7 @@
   "browserslist": [
     "last 2 years"
   ],
-  "author": "indonez",
+  "author": "mudza09",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.7",

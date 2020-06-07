@@ -1,7 +1,7 @@
 .in-article {
-    .uk-width-3-4\@m {
-        margin-top: -158px;
-    }    
+    .in-figure-available {
+        margin-bottom: -158px;
+    }
     blockquote {
         font-family: $base-font-family;
         font-size: 22px;
@@ -38,16 +38,16 @@
 }
 @media (max-width: 960px) {
     .in-article {
-        .uk-width-3-4\@m {
-            margin-top: 0;
-        }
-        img {
-            &.uk-width-1-1 {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                margin-bottom: -3px;
-                position: relative;
-                z-index: 3;
+        .in-figure-available {
+            margin-bottom: 0;
+            img {
+                &.uk-width-1-1 {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    margin-bottom: -3px;
+                    position: relative;
+                    z-index: 3;
+                }
             }
         }
         blockquote {

@@ -8,11 +8,11 @@
         <div class="uk-width-large uk-padding-large">
             <ul class="uk-nav-default uk-nav-parent-icon" data-uk-nav>
                 {{#each navigation.nav}}
-                <li {{#if dropdown}}class="uk-parent"{{/if}}><a href="{{root}}{{link}}">{{title}}</a>{{#unless dropdown}}</li>{{/unless}}
+                <li{{#if dropdown}} class="uk-parent"{{/if}}><a href="{{root}}{{link}}">{{title}}</a>{{#unless dropdown}}</li>{{/unless}}
                     {{#if dropdown.[0].standard}}
                     <ul class="uk-nav-sub">
                         {{#each dropdown.[0].standard}}
-                        <li><a href="{{root}}{{link}}">{{title}}</a></li>
+                        <li><a href="{{root}}{{link}}">{{title}}{{#with icon}}<i class="fas {{name}} fa-sm"></i>{{/with}}</a></li>
                         {{/each}}
                     </ul>
                     {{else}}

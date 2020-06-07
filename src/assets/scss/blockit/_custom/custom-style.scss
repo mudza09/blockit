@@ -1,3 +1,11 @@
+header {
+    .uk-navbar-right {
+        .uk-button-secondary {
+            background: #323131;
+        }
+    }
+}
+
 .blockit-html-color {
     color: #e75c2e;
 }
@@ -15,4 +23,28 @@
 }
 .blockit-gulp-color {
     color: #e3464c;
+}
+
+.in-gstarted {
+    pre[class*="language-"] {
+        padding: 1.8em 6.2em 2em 2.4em;
+    }
+    .code-toolbar {
+        display: block;        
+        .toolbar {
+            top: 0;
+            opacity: 0;
+            a,
+            button,
+            span {
+                border-bottom-right-radius: 0;
+                cursor: initial;
+            }            
+        }
+        &:hover {
+            .toolbar {
+                opacity: 0;
+            }
+        }
+    }
 }
