@@ -11,7 +11,6 @@ if (path === "getting-started.html") {
         const codeSanitize = codeText[0].textContent.replace(/        /g,"");
 
         getStarted[i].innerHTML = codeSanitize;
-        console.log(codeSanitize)
     }
 } else {
     for (let i = 0; i < sectionArray.length; i++) {

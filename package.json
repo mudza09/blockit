@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "gulp watch",
     "build": "gulp build",
-    "minify": "gulp minify"    
+    "minify": "gulp minify"
   },
   "keywords": [
     "handlebars",
@@ -37,7 +37,7 @@
     "panini": "^1.6.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "uikit": "^3.5.3"
   }
 }
