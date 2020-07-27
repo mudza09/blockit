@@ -1,6 +1,5 @@
 /* --------------------------------------------------------------------------
  * File        : config.js
- * Version     : 1.0
  * Author      : indonez
  * Author URI  : http://www.indonez.com
  *
@@ -15,9 +14,10 @@
 let slideshowApp = {
     //----------- 1. uikit slideshow -----------
     theme_slideshow: function () {
-        let slideshow = UIkit.slideshow('.in-slideshow', {
+        UIkit.slideshow('.in-slideshow', {
             autoplay: true,
             autoplayInterval: 7000,
+            pauseOnHover: false,
             animation: 'slide',
             minHeight: 280,
             maxHeight: 480

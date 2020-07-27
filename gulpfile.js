@@ -30,7 +30,7 @@ function compileHtml() {
         layouts: 'src/layouts/',
         partials: 'src/partials/',
         helpers: 'src/helpers/',
-        data: 'src/data/'            
+        data: 'src/data/'
     }))
     .pipe(extReplace('.html'))
     .pipe(beautify({
@@ -40,7 +40,7 @@ function compileHtml() {
             preserve_newlines: true,
         }
     }))
-    // .pipe(validator())
+    //.pipe(validator())
     .pipe(dest('dist'))
 };
 
@@ -54,45 +54,53 @@ function resetPages(done) {
 function compileCss() {
     return merge(
         // uikit sass compile
-        src('src/assets/scss/uikit.scss')        
+        src('src/assets/scss/uikit.scss')
         .pipe(newer('dist/css'))
-        .pipe(sass().on('error', sass.logError))        
+        .pipe(sass().on('error', sass.logError))
         .pipe(rename('uikit.min.css'))
         .pipe(beautify({css: {file_types: ['.css']} }))
         .pipe(minify({minify: true, minifyCSS: true}))
         .pipe(dest('dist/css')),
 
         // style sass compile
-        src('src/assets/scss/style.scss')        
+        src('src/assets/scss/main.scss')
         .pipe(newer('dist/css'))
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoPrefixer())      
-        .pipe(rename('style.css'))        
+        .pipe(autoPrefixer())
+        .pipe(rename('style.css'))
         .pipe(beautify({css: {file_types: ['.css']} }))
-        .pipe(dest('dist/css'))
+        .pipe(dest('dist/css')),
+
+        // css vendors
+        src('src/assets/css/*')
+        .pipe(newer('dist/css/vendors'))
+        .pipe(dest('dist/css/vendors')),
     )
 };
 
 // Vendor javascript concat task
 function compileJs() {
     return merge(
-        // js config deliver
-        src(['src/assets/js/*.js', '!src/assets/js/vendor/*.js'])
-        .pipe(newer('dist/js'))
+        // config-theme.js
+        src(['src/assets/js/*.js', '!src/assets/js/indonez/*.js'])
         .pipe(beautify({js: {file_types: ['.js']} }))
         .pipe(dest('dist/js')),
 
-        // js main concat
-        src('src/assets/js/in-core/*.js')
-        .pipe(concat('in-core.min.js', {newLine: '\r\n\r\n'}))
+        // indonez.min.js
+        src('src/assets/js/indonez/*.js')
+        .pipe(concat('indonez.min.js', {newLine: '\r\n\r\n'}))
         .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
-        .pipe(dest('dist/js/vendor')),
+        .pipe(dest('dist/js/vendors')),
 
-        // js vendor
-        src('src/assets/js/vendor/*.js')
-        .pipe(newer('dist/js/vendor'))
-        .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
-        .pipe(dest('dist/js/vendor'))
+        // uikit.min.js
+        src('node_modules/uikit/dist/js/uikit.min.js')
+        .pipe(newer('dist/js/vendors'))
+        .pipe(dest('dist/js/vendors')),
+
+        // js vendors
+        src('src/assets/js/vendors/*.js')
+        .pipe(newer('dist/js/vendors'))
+        .pipe(dest('dist/js/vendors'))
     )
 };
 
@@ -200,6 +208,5 @@ function browserReload() {
 
 // Define task for gulp
 task("build", series(clean, parallel(compileHtml, compileCss, compileJs, minifyImg, serveStatic)))
-task("dev", series(compileHtml, compileCss, compileJs, minifyImg))
-task("watch", series("dev", parallel(wacthFiles, browserReload)))
+task("watch", series(compileHtml, compileCss, compileJs, minifyImg, parallel(wacthFiles, browserReload)))
 task("minify", series(minifyDemo))

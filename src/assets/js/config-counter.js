@@ -1,6 +1,5 @@
 /* --------------------------------------------------------------------------
  * File        : config-counter.js
- * Version     : 1.0
  * Author      : indonez
  * Author URI  : http://www.indonez.com
  *
@@ -28,11 +27,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-1'));
+        counter.start();
     },
     //---------- 2. Counter config 2 -----------
     theme_counter_2: function () {
@@ -43,11 +38,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-2'));  
+        counter.start();
     },
     //---------- 3. Counter config 3 -----------
     theme_counter_3: function () {
@@ -58,11 +49,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-3'));  
+        counter.start();
     },
     //---------- 4. Counter config 4 -----------
     theme_counter_4: function () {
@@ -73,11 +60,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-4'));    
+        counter.start();
     },
     //---------- 5. Counter config 5 -----------
     theme_counter_5: function () {
@@ -88,11 +71,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-5'));   
+        counter.start();
     },
     //---------- 6. Counter config 6 -----------
     theme_counter_6: function () {
@@ -103,11 +82,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-6'));   
+        counter.start();
     },
     //---------- 7. Counter config 7 -----------
     theme_counter_7: function () {
@@ -118,11 +93,7 @@ let counterApp = {
             intvalues: true,
             interval: 50
         });
-        let observer = new IntersectionObserver(function(entries) {
-            if(entries[0].isIntersecting === true)
-                counter.start();
-        }, { threshold: [0] });
-        observer.observe(document.querySelector('.count-7'));  
+        counter.start();
     },
     // theme init
     theme_init: function () {
