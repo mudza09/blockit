@@ -1,8 +1,0 @@
-- breadcrumbs (x)
-- pagination
-- socials icon
-- search form
-- login/register
-- comingsoon
-- 404
-- app button
