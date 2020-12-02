@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="{{content.head.theme-color}}"/>
     <!-- Site Properties -->
-    <title>{{content.head.title}}</title>
+    <title>{{content.head.title}}{{#ifpage 'blog-article' 'blog-list' }} - {{title}}{{/ifpage}}</title>
     <link rel="shortcut icon" href="{{root}}favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="{{root}}apple-touch-icon.png">
     {{!-- Stylesheet area --}}

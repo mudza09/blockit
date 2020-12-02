@@ -3,28 +3,30 @@ const {src, dest, task, watch, series, parallel} = require('gulp');
 // Gulp plugin
 const   panini          = require('panini'),
         merge           = require('merge-stream'),
-        extReplace      = require('gulp-ext-replace'),
         newer           = require('gulp-newer'),
         del             = require('del'),
-        sass            = require('gulp-sass'),
-        autoPrefixer    = require('gulp-autoprefixer'),
-        beautify        = require('gulp-jsbeautifier'),
         rename          = require('gulp-rename'),
         concat          = require('gulp-concat'),
+        sass            = require('gulp-sass'),
+        beautify        = require('gulp-jsbeautifier'),
         imagemin        = require('gulp-imagemin'),
-        browserSync     = require('browser-sync').create(),
+        postcss         = require('gulp-postcss'),
+        autoprefixer    = require('autoprefixer'),
+        purgecss        = require('@fullhuman/postcss-purgecss'),
+        shorthand       = require('postcss-merge-longhand'),
+        mediaquery      = require('postcss-combine-media-query'),
+        browsersync     = require('browser-sync').create(),
         minify          = require('gulp-minifier'),
-        validator       = require('gulp-w3c-html-validator');  
+        validator       = require('gulp-w3c-html-validator');
 
 // Clean dist folder
-function clean() {
+function cleanDist() {
     return del('dist')
 };
 
-// Handlebars compile task
+// HTML compile task
 function compileHtml() {
     return src('src/pages/**/*.hbs')
-    .pipe(newer('dist'))
     .pipe(panini({
         root: 'src/pages/',
         layouts: 'src/layouts/',
@@ -32,7 +34,7 @@ function compileHtml() {
         helpers: 'src/helpers/',
         data: 'src/data/'
     }))
-    .pipe(extReplace('.html'))
+    .pipe(rename(path => path.extname = '.html'))
     .pipe(beautify({
         html: {
             file_types: ['.html'],
@@ -40,104 +42,77 @@ function compileHtml() {
             preserve_newlines: true,
         }
     }))
-    //.pipe(validator())
+    // .pipe(validator())
     .pipe(dest('dist'))
 };
 
-// Panini reload cache
-function resetPages(done) {
-    panini.refresh()
-    done()
-};
-
-// Sass compile task
+// Css compile task
 function compileCss() {
     return merge(
-        // uikit sass compile
+        // uikit.min.css compile task
         src('src/assets/scss/uikit.scss')
-        .pipe(newer('dist/css'))
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('uikit.min.css'))
         .pipe(beautify({css: {file_types: ['.css']} }))
         .pipe(minify({minify: true, minifyCSS: true}))
-        .pipe(dest('dist/css')),
+        .pipe(dest('dist/css/vendors')),
 
-        // style sass compile
+        // style.css compile task
         src('src/assets/scss/main.scss')
-        .pipe(newer('dist/css'))
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoPrefixer())
         .pipe(rename('style.css'))
         .pipe(beautify({css: {file_types: ['.css']} }))
-        .pipe(dest('dist/css')),
-
-        // css vendors
-        src('src/assets/css/*')
-        .pipe(newer('dist/css/vendors'))
-        .pipe(dest('dist/css/vendors')),
+        .pipe(postcss([
+            autoprefixer(),
+            shorthand()
+        ]))
+        .pipe(dest('dist/css'))
     )
 };
 
-// Vendor javascript concat task
+// Javascript concat task
 function compileJs() {
     return merge(
         // config-theme.js
         src(['src/assets/js/*.js', '!src/assets/js/indonez/*.js'])
-        .pipe(beautify({js: {file_types: ['.js']} }))
+        .pipe(newer('dist/js/config-theme.js'))
+        .pipe(beautify({js: {file_types: ['.js']} }))        
         .pipe(dest('dist/js')),
 
         // indonez.min.js
         src('src/assets/js/indonez/*.js')
+        .pipe(newer('dist/js/vendors/indonez.min.js'))
         .pipe(concat('indonez.min.js', {newLine: '\r\n\r\n'}))
         .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
-        .pipe(dest('dist/js/vendors')),
-
-        // uikit.min.js
-        src('node_modules/uikit/dist/js/uikit.min.js')
-        .pipe(newer('dist/js/vendors'))
-        .pipe(dest('dist/js/vendors')),
-
-        // js vendors
-        src('src/assets/js/vendors/*.js')
-        .pipe(newer('dist/js/vendors'))
         .pipe(dest('dist/js/vendors'))
     )
 };
 
 // Image optimization task
-function minifyImg() {
-    return src('src/assets/img/**/*')
+function compressImg() {
+    return src('src/assets/img/*')
     .pipe(newer('dist/img'))
-    .pipe(
-        imagemin([
-            imagemin.gifsicle({
-                interlaced: true
-            }),
-            imagemin.mozjpeg({
-                quality: 80,
-                progressive: true
-            }),
-            imagemin.optipng({
-                optimizationLevel: 5
-            }),
-            imagemin.svgo({
-                plugins: [{
-                    removeViewBox: true
-                }, {
-                    cleanupIDs: false
-                }]
-            })
-        ])
-    )
+    .pipe(imagemin([
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.mozjpeg({quality: 80, progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({
+            plugins: [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+            ]
+        })
+    ], {
+        verbose: false
+    }))
     .pipe(dest('dist/img'))
 };
 
-// Static file task
-function serveStatic() {
+// Static assets task
+function staticAssets() {
     return merge(
         // webfonts
         src('src/assets/fonts/*')
-        .pipe(newer('dist/fonts'))
         .pipe(dest('dist/fonts')),
 
         // fontAwesome icons
@@ -147,36 +122,51 @@ function serveStatic() {
             'node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff',
             'node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2'
         ])
-        .pipe(newer('dist/fonts'))
         .pipe(dest('dist/fonts')),
 
         // favicon
         src('src/assets/static/favicon.ico')
-        .pipe(newer('dist'))
         .pipe(dest('dist')),
 
         // apple touch icon
         src('src/assets/static/apple-touch-icon.png')
-        .pipe(newer('dist'))
         .pipe(dest('dist')),
 
-        // php file task
-        src('src/assets/php/*')
-        .pipe(newer('dist'))
-        .pipe(dest('dist'))
+        // sendmail.php
+        src('src/assets/php/sendmail.php')
+        .pipe(dest('dist')),
+
+        // uikit.min.js
+        src('node_modules/uikit/dist/js/uikit.min.js')
+        .pipe(dest('dist/js/vendors')),
+
+        // js vendors
+        src('src/assets/js/vendors/*.js')
+        .pipe(dest('dist/js/vendors')),
+
+        // css vendors
+        src('src/assets/css/*')
+        .pipe(dest('dist/css/vendors'))
     )
 };
 
-// Minify demo file
-function minifyDemo() {
+// Minify for production files
+function minifyFiles() {
     return merge(
         // html minify
         src('dist/**/*.html')
         .pipe(minify({minify: true, minifyHTML: {collapseWhitespace: true, removeComments: true}}))
-        .pipe(dest('dist/')),
+        .pipe(dest('dist')),
 
         // css minify
         src('dist/css/*.css')
+        .pipe(postcss([
+            mediaquery(),
+            purgecss({
+                content: ['dist/*.html', 'dist/js/**/*.js'],
+                safelist: {standard: [/@m$/, /in-mobile-nav$/]}
+            })
+        ]))
         .pipe(minify({minify: true, minifyCSS: true}))
         .pipe(dest('dist/css')),
 
@@ -187,17 +177,24 @@ function minifyDemo() {
     )
 };
 
-// Browsersync and wacth file task
+// Panini reload cache
+function resetPages(done) {
+    panini.refresh()
+    done()
+};
+
+// Wacth file task
 function wacthFiles() {
     watch('src/assets/scss/**/*.scss', series(compileCss))
     watch('src/assets/js/**/*.js', series(compileJs))
-    watch('src/assets/img/**/*', series(minifyImg))
+    watch('src/assets/img/**/*', series(compressImg))
     watch('src/**/*.hbs', series(resetPages, compileHtml))
     watch('src/data/*.json', series(resetPages, compileHtml))
 };
 
+// Browsersync file task
 function browserReload() {
-    browserSync.init({
+    browsersync.init({
         watch: true,
         notify: false,
         server: {
@@ -207,6 +204,6 @@ function browserReload() {
 };
 
 // Define task for gulp
-task("build", series(clean, parallel(compileHtml, compileCss, compileJs, minifyImg, serveStatic)))
-task("watch", series(compileHtml, compileCss, compileJs, minifyImg, parallel(wacthFiles, browserReload)))
-task("minify", series(minifyDemo))
+task("build", series(cleanDist, compileHtml, compileCss, compileJs, staticAssets, compressImg))
+task("watch", parallel(wacthFiles, browserReload))
+task("minify", minifyFiles)

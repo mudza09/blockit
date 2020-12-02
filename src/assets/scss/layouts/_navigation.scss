@@ -17,5 +17,4 @@ $navigation-border-radius-2:                  $base-border-radius-2 !default;
 // mobile-navigation
 @import "navigation/mobile.scss";
 
-// sticky-navigation
-@import "navigation/sticky.scss";
+// sticky moved to mixins

@@ -2,7 +2,12 @@
 function iframeVid(_props) {
     this.defaults = {
         selector: '.in-iframe',     // selector used to find video element
-        url: '',                    // your video, youtube, vimeo url
+        videos: [
+            {
+                id: '',             // video id (should not be the same as the next video)
+                url: ''             // video embed url
+            }
+        ],
         width: 900,                 // width of your video
         height: 506                 // height of your video
     }
@@ -16,12 +21,27 @@ function iframeVid(_props) {
 		}
     }
 
-    if (document.querySelector(this.props.selector) != null) {
-        let iframeWrap = document.querySelector(this.props.selector),
-            iframeInsert = `<iframe src="${this.props.url}" width="${this.props.width}" height="${this.props.height}" data-uk-video="automute: true"></iframe>`,
-            observer = new IntersectionObserver(function(entries) {
-                if (entries[0].isIntersecting === true && iframeWrap.children.length === 1) iframeWrap.insertAdjacentHTML('beforeend', iframeInsert);
-            }, { threshold: [0] });
-        observer.observe(document.querySelector(this.props.selector));
-    }
+    const iframeWrap = document.querySelectorAll(this.props.selector)
+    const videos = this.props.videos
+    const width = this.props.width
+    const height = this.props.height
+
+    iframeWrap.forEach(function(e, i) {
+        e.parentElement.setAttribute('id', videos[i].id)
+        e.parentElement.previousElementSibling.children[0].setAttribute('href', `#${videos[i].id}`)
+
+        observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting && e.children.length === 1) {
+                const iframeTag = document.createElement('iframe')
+                
+                iframeTag.setAttribute('src', videos[i].url)
+                iframeTag.setAttribute('width', width)
+                iframeTag.setAttribute('height', height)
+                iframeTag.setAttribute('data-uk-video', 'automute: true')
+
+                e.appendChild(iframeTag);
+            }
+        }, { threshold: [0] });
+        observer.observe(e);
+    })
 }

@@ -28,8 +28,12 @@ const HomepageApp = {
     //---------- 2. Modal iframe -----------
     theme_iframe: function() {
         const youtube = new iframeVid({
-            selector: '.in-iframe',
-            url: 'https://www.youtube.com/embed/F3QpgXBtDeo',
+            videos: [
+                {
+                    id: 'vid-1',
+                    url: 'https://www.youtube.com/embed/F3QpgXBtDeo'
+                }
+            ],
             width: 900,
             height: 506
         });

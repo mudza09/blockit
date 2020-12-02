@@ -1,4 +1,16 @@
 /* mobilenav.js | https://www.indonez.com | Indonez | MIT License */
+const mnavConfig = {
+    extraButton: true,
+    buttons: [
+        {
+            name: '',                // button name
+            url: '',                 // button url
+            type: 'primary',         // button type (default, primary, secondary, danger, text)
+            icon: 'sign-in-alt'      // button icon, you can use all icons from here : https://fontawesome.com/icons?d=gallery&s=solid&m=free
+        }
+    ],
+}
+
 const mainNav = document.querySelector('.uk-navbar-nav');
 
 if (mainNav !== null) {    
@@ -34,12 +46,42 @@ if (mainNav !== null) {
         }  
     });
 
+    // button url function
+    function buttonUrl(index) {
+        let urlValue;
+        mnavConfig.buttons[index].url.length > 0 
+            ? urlValue = mnavConfig.buttons[index].url 
+            : urlValue = signinEle.querySelector('a').pathname.substr(1); 
+        return urlValue;
+    }
+
+    // button name function
+    function buttonName(index) {
+        let nameValue;
+        mnavConfig.buttons[index].name.length > 0 
+            ? nameValue = mnavConfig.buttons[index].name 
+            : nameValue = signinEle.querySelector('a').innerText;
+        return nameValue;
+    }
+
+    // button icon function
+    function buttonIcon(index) {
+        let iconTag;
+        mnavConfig.buttons[index].icon !== undefined && mnavConfig.buttons[index].icon.length > 0
+            ? iconTag = `<i class="fas fa-${mnavConfig.buttons[index].icon} uk-margin-small-left"></i>`
+            : iconTag = '';
+        return iconTag;
+    }
+
     // Optional, used if want add signin button
     const signinEle = document.querySelector('.in-optional-nav');
     let signinBtn = '';
-
-    if (signinEle !== null && signinEle.children.length > 0) {
-        signinBtn = `<a href="${signinEle.children[0].pathname.substr(1)}" class="uk-button uk-button-primary uk-border-rounded uk-align-center">${signinEle.children[0].innerText}<i class="fas fa-sign-in-alt uk-margin-small-left"></i></a>`;
+    
+    // check condition of extraButton true or false
+    if (mnavConfig.extraButton && signinEle !== null && signinEle.children.length > 0) {
+        mnavConfig.buttons.forEach(function(e, i) {
+            signinBtn += `<a href="${buttonUrl(i)}" class="uk-button uk-button-${mnavConfig.buttons[i].type} uk-border-rounded uk-align-center">${buttonName(i)}${buttonIcon(i)}</a>`;
+        })
     }
 
     // Mobile navigation wrapper
