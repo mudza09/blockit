@@ -6,10 +6,11 @@ $timeline-secondary-color:                    $base-secondary-color !default;
 $timeline-border-color:                       $base-border-color !default;
 $timeline-border-color-2:                     $base-border-color-2 !default;
 $timeline-border-width:                       $base-border-width !default;
-$timeline-border-width-2:                     $base-border-width-2 !default;
+$timeline-border-width-2:                     3px !default;
 $timeline-border-radius:                      $base-border-radius !default;
 $timeline-border-radius-2:                    $base-border-radius-2 !default;
 
 
 /* timeline component */
 @import "timeline-1.scss";
+@import "timeline-2.scss";

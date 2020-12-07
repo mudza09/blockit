@@ -1,0 +1,55 @@
+.in-timeline-2 {    
+    margin: 30px auto;
+    position: relative;
+    padding: 1px 10px;
+    .uk-card-default {
+        border: $timeline-border-width solid $timeline-border-color;
+        background-color: $timeline-default-color;
+    }
+    &:before {
+        content:"";
+        width: $timeline-border-width-2;
+        height: 100%;
+        background: $timeline-border-color;
+        left: 50%;
+        top: 0;
+        position: absolute;
+    }
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+        width: 100%;
+    }
+    .in-timeline-item {
+        margin: 25px 0;
+        position: relative;
+        &:after, &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+        .in-timeline-icon {
+            width: 13px;
+            height: 13px;
+            border: 10px solid $timeline-default-color;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            overflow: hidden;
+            margin-left: -15px;
+        }
+        .in-timeline-content {
+            width: 45%;
+            &.right {
+                float: right;
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .in-timeline-2 > .uk-child-width-1-1 > div {
+        margin-top: 0;
+    }
+}

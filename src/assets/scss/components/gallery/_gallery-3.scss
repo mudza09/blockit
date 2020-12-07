@@ -12,12 +12,15 @@
         }
     }
     .uk-inline-clip {
+        background-color: $gallery-default-color;
         a {
             img {
                 transition: all ease 300ms;
             }
             &:hover {
                 img {
+                    filter: blur(2px);
+                    -webkit-filter: blur(2px);
                     transition: all ease 300ms;
                     opacity: 0.8;
                 }
