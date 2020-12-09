@@ -1,6 +1,6 @@
 <!-- Javascript -->
 <script src="{{root}}js/vendors/uikit.min.js"></script>
-<script src="{{root}}js/vendors/indonez.min.js"></script>
+<script src="{{root}}js/vendors/blockit.min.js"></script>
 <script src="{{root}}js/vendors/prism.min.js"></script>
 {{#unlesspage 'index' 'blog-list' 'blog-article'}}
 <script src="{{root}}js/vendors/blockit-syntax.js"></script>
@@ -8,6 +8,7 @@
 {{#ifpage 'counter'}}
 <script src="{{root}}js/config-counter.js"></script>
 {{/ifpage}}
-{{#ifpage 'hero'}}
+{{!-- {{#ifpage 'hero'}}
 <script src="{{root}}js/config-slideshow.js"></script>
-{{/ifpage}}
+{{/ifpage}} --}}
+<script src="{{root}}js/config-theme.js"></script>

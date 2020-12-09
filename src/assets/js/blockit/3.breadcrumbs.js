@@ -1,6 +1,6 @@
 /* breadcrumb.js | https://www.indonez.com | Indonez | MIT License */
-(function() {
-    const breadConfig = {
+function breadcrumbConfig(options) {
+    this.defaults = {
         homeTitle : 'Home',                                  // home or root of your breadcrumb title
         navbarList : '.uk-navbar-nav li',                    // your navbar list selector
         navbarActive : '.uk-navbar-nav li.uk-active',        // your active class selector for navbar
@@ -11,8 +11,18 @@
         truncate: false,                                     // truncate option in breadcrumb article if you think to long
         truncateTotal: 80                                    // the number of words you want to truncate
     }
-    
-    const breadWrapper = document.querySelector(breadConfig.breadSelector);
+
+    // check if have settings by user, if none will use defaults
+    this.options = {};
+    for (let obj in this.defaults) {
+        if (typeof(obj) !== 'undefined') {
+            this.options[obj] = this.defaults[obj];
+            if (options.hasOwnProperty(obj) && this.options.hasOwnProperty(obj))
+                this.options[obj] = options[obj];
+        }
+    };
+
+    const breadWrapper = document.querySelector(this.options.breadSelector);
     const checkTitle = document.title.toLowerCase();
     const mobileWidth = window.matchMedia('(max-width: 960px)');
 
@@ -26,7 +36,7 @@
 
     // Create breadcrumb function
     function createBreadcrumb() {
-        const currentActive = document.querySelectorAll(breadConfig.navbarActive); 
+        const currentActive = document.querySelectorAll(this.options.navbarActive); 
 
         currentActive.forEach(function(el) {
             const breadTitle = el.childNodes[0].innerText;
@@ -39,15 +49,15 @@
 
     // Create breadcrumb blog article function
     function createBreadcrumbArticle(homePath) {
-        if (checkTitle.includes(breadConfig.blogTitle) && document.querySelector(breadConfig.articleSelector) !== null) {
-            const articleTitle = document.querySelector(breadConfig.articleSelector).querySelector(breadConfig.titleSelector).innerText;
+        if (checkTitle.includes(this.options.blogTitle) && document.querySelector(this.options.articleSelector) !== null) {
+            const articleTitle = document.querySelector(this.options.articleSelector).querySelector(this.options.titleSelector).innerText;
             const allLink = document.querySelectorAll('.uk-navbar-nav li a');
 
-            breadWrapper.innerHTML = `<li><a href="${homePath.slice(location.pathname.lastIndexOf('/') + 1)}">${breadConfig.homeTitle}</a></li>`;
-            breadTitle = breadConfig.truncate ? truncateWord(articleTitle, breadConfig.truncateTotal) : articleTitle;
+            breadWrapper.innerHTML = `<li><a href="${homePath.slice(location.pathname.lastIndexOf('/') + 1)}">${this.options.homeTitle}</a></li>`;
+            breadTitle = this.options.truncate ? truncateWord(articleTitle, this.options.truncateTotal) : articleTitle;
 
             allLink.forEach(function(el) {
-                if (el.innerText.toLowerCase() == breadConfig.blogTitle) {
+                if (el.innerText.toLowerCase() == this.options.blogTitle) {
                     el.parentNode.classList.add('uk-active');
 
                     const levelOne = document.createElement('li');
@@ -90,11 +100,12 @@
 
     // Check if breadcrumb present and run the all function
     if (breadWrapper !== null) {
-        const homePath = document.querySelectorAll(breadConfig.navbarList)[0].getElementsByTagName('a')[0].pathname;
-        breadWrapper.innerHTML = `<li><a href="${homePath.slice(location.pathname.lastIndexOf('/') + 1)}">${breadConfig.homeTitle}</a></li>`;
+        const homePath = document.querySelectorAll(this.options.navbarList)[0].getElementsByTagName('a')[0].pathname;
+        breadWrapper.innerHTML = `<li><a href="${homePath.slice(location.pathname.lastIndexOf('/') + 1)}">${this.options.homeTitle}</a></li>`;
 
         createBreadcrumb();
         createBreadcrumbArticle(homePath);
         createLastBreadcrumb();
     }
-})();
+};
+breadcrumbConfig({});

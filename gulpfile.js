@@ -74,15 +74,15 @@ function compileCss() {
 function compileJs() {
     return merge(
         // config-theme.js
-        src(['src/assets/js/*.js', '!src/assets/js/indonez/*.js'])
+        src(['src/assets/js/*.js', '!src/assets/js/blockit/*.js'])
         .pipe(newer('dist/js/config-theme.js'))
         .pipe(beautify({js: {file_types: ['.js']} }))        
         .pipe(dest('dist/js')),
 
-        // indonez.min.js
-        src('src/assets/js/indonez/*.js')
-        .pipe(newer('dist/js/vendors/indonez.min.js'))
-        .pipe(concat('indonez.min.js', {newLine: '\r\n\r\n'}))
+        // blockit.min.js
+        src('src/assets/js/blockit/*.js')
+        .pipe(newer('dist/js/vendors/blockit.min.js'))
+        .pipe(concat('blockit.min.js', {newLine: '\r\n\r\n'}))
         .pipe(minify({minify: true, minifyJS: {sourceMap: false}}))
         .pipe(dest('dist/js/vendors'))
     )
