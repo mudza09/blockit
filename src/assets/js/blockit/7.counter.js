@@ -66,8 +66,8 @@ counterUp.prototype.start = function() {
 	"use strict";
 	var self = this;
 	if (document.querySelector(self.props.selector) != null) {
-		let observer = new IntersectionObserver(function(entries) {
-            if (entries[0].isIntersecting === true) {
+		const observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
 				this.intervalID = setInterval( function() {
 					if(!self.updating)
 						self.update();

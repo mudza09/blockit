@@ -6,11 +6,11 @@
  * Indonez Copyright 2020 All Rights Reserved.
  * -------------------------------------------------------------------------- 
  * javascript handle initialization
-    1. uikit slideshow
+    1. Slideshow
     2. Modal iframe
     3. Counter
-    4. Counter
-    3. Counter
+    4. Breadcrumb
+    5. Mobile nav button
  * -------------------------------------------------------------------------- */
 
 'use strict';
