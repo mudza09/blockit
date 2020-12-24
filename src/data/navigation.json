@@ -57,8 +57,8 @@
                             "link": "card.html"
                         },
                         {
-                            "title": "Blog",
-                            "link": "blog.html"
+                            "title": "Blog card",
+                            "link": "blog-card.html"
                         },
                         {
                             "title": "Counter",
@@ -79,12 +79,8 @@
                 {
                     "standard": [ 
                         {
-                            "title": "Blog list",
-                            "link": "blog-list.html"
-                        },
-                        {
-                            "title": "Blog article",
-                            "link": "blog-article.html"
+                            "title": "Blog",
+                            "link": "blog.html"
                         },
                         {
                             "title": "404 error",

@@ -1,4 +1,4 @@
-/* mobilenav.js | https://www.indonez.com | Indonez | MIT License */
+/* mobile-nav.js | https://www.indonez.com | Indonez | MIT License */
 function mobilenavConfig(options) {
     this.defaults = {
         extraButton: true,

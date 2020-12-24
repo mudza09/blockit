@@ -18,7 +18,7 @@
 const HomepageApp = {
     //----------- 1. Slideshow -----------
     theme_slideshow: function() {
-        const slideshow = UIkit.slideshow('.in-slideshow', {
+        UIkit.slideshow('.in-slideshow', {
             autoplay: true,
             autoplayInterval: 7000,
             pauseOnHover: false,
@@ -55,10 +55,10 @@ const HomepageApp = {
     },
     //---------- 4. Breadcrumb -----------
     theme_breadcrumb: function() {
-        const breadcrumb = breadcrumbConfig({
+        breadcrumb({
             homeTitle : 'Home',                                            // home or root of your breadcrumb title
             truncate: true,                                                // truncate option in breadcrumb article if you think to long
-            truncateTotal: 80                                              // the number of words you want to truncate
+            truncateWords: 60                                              // the number of words you want to truncate
         });
     },
     //---------- 5. Mobile nav button -----------

@@ -1,4 +1,4 @@
-/* modaliframe.js | https://www.indonez.com | Indonez | MIT License */
+/* modal-iframe.js | https://www.indonez.com | Indonez | MIT License */
 function iframeConfig(options) {
     this.defaults = {
         selector: '.in-iframe',     // selector used to find video element
