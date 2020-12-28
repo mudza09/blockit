@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			event.preventDefault();
 			const postdata = serialize(document.getElementById('contact-form'));
-	
+
 			ajaxRequest("POST", "./sendmail.php", postdata, (success, response) => {
 				if (success) {
 					const result = JSON.parse(response);
@@ -52,19 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
 						document.getElementById('name').addEventListener('click', function () {
 							document.getElementById('name').classList.remove('uk-form-danger')
 						});
-	
+
 						if (result.emailError)
 						document.getElementById('email').classList.add('uk-form-danger');
 						document.getElementById('email').addEventListener('click', function () {
 							document.getElementById('email').classList.remove('uk-form-danger')
 						});
-	
+
 						if (result.subjectError)
 						document.getElementById('subject').classList.add('uk-form-danger');
 						document.getElementById('subject').addEventListener('click', function () {
 							document.getElementById('subject').classList.remove('uk-form-danger')
 						});
-						
+
 						if (result.messageError)
 						document.getElementById('message').classList.add('uk-form-danger');
 						document.getElementById('message').addEventListener('click', function () {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						});
 					}
 				}
-			});
-		});
+			})
+		})
 	}
 });

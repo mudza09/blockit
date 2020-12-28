@@ -28,8 +28,8 @@ const HomepageApp = {
         });
     },
     //---------- 2. Modal iframe -----------
-    theme_iframe: function() {
-        const iframe = iframeConfig({
+    theme_video: function() {
+        modalIframe({
             videos: [
                 {
                     id: 'video-1',                                       // video id (should not be the same as the next video)
@@ -63,8 +63,8 @@ const HomepageApp = {
     },
     //---------- 5. Mobile nav button -----------
     theme_mobilenav: function() {
-        const mobileButton = mobilenavConfig({
-            extraButton: true,
+        mobileNav({
+            addonButtons: true,
             buttons: [
                 {
                     name: 'Download',                                      // button name
@@ -77,7 +77,7 @@ const HomepageApp = {
     },
     theme_init: function() {
         HomepageApp.theme_slideshow();
-        HomepageApp.theme_iframe();
+        HomepageApp.theme_video();
         HomepageApp.theme_counter();
         HomepageApp.theme_breadcrumb();
         HomepageApp.theme_mobilenav();

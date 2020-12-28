@@ -20,9 +20,9 @@ function breadcrumb(options) {
     if (document.querySelector(`.${settings.breadcrumbElement}`) !== null) {
         // Required variables
         const breadcrumb = document.querySelector(`.${settings.breadcrumbElement}`);
-        const navbarReference = document.querySelector('.uk-navbar-nav');
-        const breadcrumbHome = navbarReference.children[0].getElementsByTagName('a')[0].pathname;
-        const breadcrumbTitle = navbarReference.querySelectorAll('li.uk-active');
+        const navbar = document.querySelector('.uk-navbar-nav');
+        const breadcrumbHome = navbar.children[0].getElementsByTagName('a')[0].pathname;
+        const breadcrumbTitle = navbar.querySelectorAll('li.uk-active');
         const pageTitleName = document.title.toLowerCase();
         let createLiElement;
 
@@ -51,7 +51,7 @@ function breadcrumb(options) {
                 if (pageTitleName.includes(settings.blogTitle) && document.querySelector(`.${settings.articleElement}`) !== null) {
                     let articleTitle = document.querySelector(`.${settings.articleElement}`).querySelector(settings.titleElement).innerText;
                     const createLiArticle = document.createElement('li');
-                    const addActive = navbarReference.querySelectorAll('li a');
+                    const addActive = navbar.querySelectorAll('li a');
 
                     breadcrumb.innerHTML = `<li><a href="${pathParam.slice(location.pathname.lastIndexOf('/') + 1)}">${settings.homeTitle}</a></li>`;
 
