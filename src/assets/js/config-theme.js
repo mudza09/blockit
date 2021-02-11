@@ -70,7 +70,7 @@ const HomepageApp = {
                     name: 'Download',                                      // button name
                     url: 'https://github.com/Mudza09/blockit/releases',    // button url
                     type: 'primary',                                       // button type (default, primary, secondary, danger, text)
-                    icon: 'cloud-download-alt'                             // button icon, you can use all icons from here : https://fontawesome.com/icons?d=gallery&s=solid&m=free
+                    icon: 'fa-cloud-download-alt'                          // icon using a prefix "fa-" before the icon name, you can use various icons from here : https://fontawesome.com/icons?d=gallery&s=solid&m=free
                 }
             ]
         });

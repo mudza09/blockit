@@ -10,7 +10,7 @@ function mobileNav(options) {
                 name: '',                   // button name
                 url: '',                    // button url
                 type: 'primary',            // button type (default, primary, secondary, danger, text)
-                icon: 'sign-in-alt'         // button icon, you can use all icons from here : https://fontawesome.com/icons?d=gallery&s=solid&m=free
+                icon: 'fa-sign-in-alt'      // icon using a prefix "fa-" before the icon name, you can use various icons from here : https://fontawesome.com/icons?d=gallery&s=solid&m=free
             },
         ]
     };
@@ -70,17 +70,16 @@ function mobileNav(options) {
                 modalFull.id = 'modal-full';
                 modalFull.classList.add('uk-modal-full');
                 modalFull.setAttribute('data-uk-modal', '');
-                modalFull.innerHTML = `
-                <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
-                    <a class="uk-modal-close-full uk-button"><i class="fas fa-times"></i></a>
-                    <div class="uk-width-large uk-padding-large">
-                        ${mobileNavbar.outerHTML}
-                        ${mobileNavMethods.createAddonBtn()}
-                    </div>
-                </div>`
+                modalFull.innerHTML = `<div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
+<a class="uk-modal-close-full uk-button"><i class="fas fa-times"></i></a>
+<div class="uk-width-large uk-padding-large">
+${mobileNavbar.outerHTML}
+${mobileNavMethods.createAddonBtn()}
+</div>
+</div>`
 
-                // Clean previous mobile button if exist and insert after that 
-                navbar.parentElement.removeChild(navbar.parentElement.lastChild);
+                // Clean previous mobile button if exist and insert after that
+                document.querySelector('.in-mobile-nav') !== null && document.querySelector('.in-mobile-nav').remove();
                 navbar.parentElement.appendChild(mobileBtn).appendChild(modalFull);
             },
             createAddonBtn: function () {
@@ -109,7 +108,7 @@ function mobileNav(options) {
             addonBtnIcon: function (data) {
                 let iconValue;
                 data.icon !== undefined && data.icon.length > 0 ?
-                    iconValue = `<i class="fas fa-${data.icon} uk-margin-small-left"></i>` :
+                    iconValue = `<i class="fas ${data.icon} uk-margin-small-left"></i>` :
                     iconValue = '';
                 return iconValue;
             },
