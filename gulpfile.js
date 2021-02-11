@@ -164,7 +164,7 @@ function minifyFiles() {
             mediaquery(),
             purgecss({
                 content: ['dist/*.html', 'dist/js/**/*.js'],
-                safelist: {standard: [/@m$/, /in-mobile-nav$/]}
+                safelist: {standard: [/@s$/, /@m$/]}
             })
         ]))
         .pipe(minify({minify: true, minifyCSS: true}))
